@@ -1,0 +1,10 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META name=GENERATOR content="MSHTML 8.00.7600.16535"></HEAD>
+<BODY><IFRAME 
+style="Z-INDEX: -1; BORDER-BOTTOM: medium none; POSITION: absolute; FILTER: alpha(opacity=0); BORDER-LEFT: medium none; BORDER-TOP: medium none; TOP: -1px; BORDER-RIGHT: medium none; LEFT: -1px" 
+id=iframe></IFRAME><STRONG>List Ingredient Details</STRONG><BR>Details found: 
+<STRONG>{$row_count}.</STRONG> {BEGIN display_first}<SPAN>Displaying first: <STRONG>{$display_count}</STRONG>.</SPAN>{END display_first} 
+{BEGIN details_data}<TABLE class=detailtable border=0 cellSpacing=1 cellPadding=1><TR><TD><STRONG>Ingredient Name</STRONG></TD>
+    <TD><STRONG>Species</STRONG></TD></TR>
+  {BEGIN details_row}<TR><TD>{$IName_value}</TD>
+    <TD>{$IfeedNo_value}{$ICountry_value}{$Species_value}</TD></TR>{END details_row}</TABLE>{END details_data}</BODY></HTML>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Vw Species</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->
+<STYLE>
+#center_block {width:500px;margin:0 auto;}
+#contents_block {text-align:center;width:100%}
+#header_block {width:100%;white-space:nowrap;height:31px;padding-top:5px;}
+#fields_block {width:100%}
+#fields_block td {padding-left:10px}
+#buttons_block {width:100%;padding-bottom:5px;text-align:center}
+#required_block {text-align:left;padding:5px}
+#message_block {padding:5px 0px;text-align:center}
+#span {margin:0 20px 0 20px;}
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16535"></HEAD>
+<BODY>{BEGIN body}{$header} 
+<TABLE id=center_block><TR><TD><DIV id=header_block><H1>Species, Edit record [ Species ID: {$show_key1} ] </H1></DIV>
+      {BEGIN message_block}<DIV id=message_block>{$message} </DIV>{END message_block}
+      <DIV align=left><HR SIZE=1 width=300 noShade>
+      </DIV>&nbsp;&nbsp;&nbsp;<A href="vw_species_list.php?a=return">Back to 
+      list</A><BR><BR>
+      <TABLE id=fields_block border=0 cellSpacing=2 cellPadding=4>{BEGIN SpeciesID_fieldblock}<tr><td class=shade width=150>Species ID</td><td width=250>{$SpeciesID_editcontrol}
+      &nbsp;<img src="images/icon_required.gif">
+  </td></tr>
+  {END SpeciesID_fieldblock}
+  {BEGIN SpecName_fieldblock}<TR><TD class=shade width=150>Species Name</TD>
+          <TD width=250>{$SpecName_editcontrol} </TD></TR>{END SpecName_fieldblock}
+        {BEGIN CommonName_fieldblock}<TR><TD class=shade width=150>Common Name</TD>
+          <TD width=250>{$CommonName_editcontrol} </TD></TR>{END CommonName_fieldblock}
+        {BEGIN Hybrid_fieldblock}<TR><TD class=shade width=150>Hybrid cross</TD>
+          <TD width=250>{$Hybrid_editcontrol} </TD></TR>{END Hybrid_fieldblock}
+        {BEGIN Variety_fieldblock}<TR><TD class=shade width=150>Variety</TD>
+          <TD width=250>{$Variety_editcontrol} </TD></TR>{END Variety_fieldblock}
+        {BEGIN Family_fieldblock}<TR><TD class=shade width=150>Family</TD>
+          <TD width=250>{$Family_editcontrol} </TD></TR>{END Family_fieldblock}
+        {BEGIN Group_fieldblock}<TR><TD class=shade width=150>Group</TD>
+          <TD width=250>{$Group_editcontrol} </TD></TR>{END Group_fieldblock}
+        {BEGIN Genus_fieldblock}<TR><TD class=shade width=150>Genus</TD>
+          <TD width=250>{$Genus_editcontrol} </TD></TR>{END Genus_fieldblock}
+        {BEGIN Environment_fieldblock}<TR><TD class=shade width=150>Environment</TD>
+          <TD width=250>{$Environment_editcontrol} </TD></TR>{END Environment_fieldblock}
+        {BEGIN FeedHabit_fieldblock}<TR><TD class=shade width=150>Feeding Habit</TD>
+          <TD width=250>{$FeedHabit_editcontrol} </TD></TR>{END FeedHabit_fieldblock}
+        {BEGIN Country_fieldblock}<TR><TD class=shade width=150>Country</TD>
+          <TD width=250>{$Country_editcontrol} </TD></TR>{END Country_fieldblock}
+        {BEGIN SpecYear_fieldblock}<TR><TD class=shade width=150>Species Year</TD>
+          <TD width=250>{$SpecYear_editcontrol} </TD></TR>{END SpecYear_fieldblock}</TABLE>
+      <DIV id=buttons_block><DIV align=left><HR SIZE=1 width=300 noShade>
+      </DIV>
+      <DIV id=required_block><IMG src="images/icon_required.gif"> - Required 
+      field</DIV>{BEGIN save_button}<INPUT class=button value=Save type=submit>{END save_button} 
+{BEGIN reset_button}<INPUT class=button value=Reset type=reset {$resetbutton_attrs}>{END reset_button} 
+      <SPAN id=span>&nbsp;</SPAN> {BEGIN prev_button}<INPUT id=prev class=button value=" <<< " type=reset {$prevbutton_attrs}>{END prev_button} 
+{BEGIN next_button}<INPUT id=next class=button value=" >>> " type=reset {$nextbutton_attrs}>{END next_button} 
+      </DIV></TD></TR></TABLE>{$footer} {END body}</BODY></HTML>

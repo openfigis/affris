@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Feed ingredient details</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->{BEGIN style_block}
+<STYLE>
+#height100{$id} {padding:10px;}
+#toplinks_caption{$id} {padding:0px 30px;font-size:12px;font-weight:bold;}
+#mastertable_block{$id} {margin-left:50px;margin-top:10px}
+#toplinks_block{$id} {width:100%;padding:3px;padding-left:30px}
+#toplinks_block{$id} span {padding-left:5px;}
+#search_records_block{$id} { padding-left:5px;}
+#search_records_block{$id} > * {vertical-align:middle;}
+#search_records_block{$id} select {margin:3px 0px;}
+#login_block{$id} {padding:10px; margin-bottom:3px}
+#login_block{$id} * {margin-left:5px; padding:5px 0px;}
+#menu_block{$id} {padding:10px;}
+#menu_block{$id} * {list-style-type:none;}
+#menu_block{$id} IMG {vertical-align:middle;}
+#record_controls{$id} {padding:10px 10px;text-align: right;}
+#record_controls{$id} span{padding-left:10px;}
+#recordcontrolsadd_block{$id} {padding:10px 10px;border: solid; border-width: 1px; border-color: #C0C0C0;text-align: right;}
+#grid_block{$id} {border:solid 1px #C0C0C0;}
+.listIcons img.listIcon{margin:0 3px;opacity:0.3;filter:alpha(opacity=30);}
+.grid_recordheader {padding-top:5px;}
+.grid_recordheader a {margin:0 5px;}
+body {margin:0px;padding:0px;}
+.bottomPanelBorder{
+	/*margin-right: 10px;*/
+	padding-bottom: 18px;
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+}
+#searchform{$id}{float: left;}
+#searchPanelContainer{$id}{
+	width: 200px;
+	float: left;
+	position:absolute;
+}
+.searchOptions {margin-top: -10px;}
+/*report styles*/
+#export_links{$id} * {padding:0}
+</STYLE>
+{END style_block}{BEGIN iestyle_block}<!--[if IE]>
+<STYLE>
+.grid {height:100%;}
+</STYLE>
+<![endif]-->{END iestyle_block}
+<META name=GENERATOR content="MSHTML 9.00.8112.16430"></HEAD>
+<BODY marginheight="0" marginwidth="0" {$bodyattrs}>{BEGIN body}<STRONG><FONT color=#004080 size=2>Listing Ingredient 
+Details:</FONT></STRONG>&nbsp; 
+<DIV id="height100{$id}">
+{BEGIN toplinks_block}<DIV id="toplinks_block{$id}">&nbsp;{BEGIN security_block}<SPAN id="login_block{$id}">Logged on as&nbsp;<B>{$username}</B>&nbsp; <A 
+href="login.php?a=logout" {$logoutlink_attrs}>Log out</A> </SPAN>{END security_block}{BEGIN menu_block}<SPAN id="menu_block{$id}">Quick jump:&nbsp; <SELECT 
+{$quickjump_attrs} {$quick_attrs}> <option value="menu.php">Back to menu</OPTION> {$quickjump_options}</SELECT> </SPAN>{END menu_block}{BEGIN asearch_link}<SPAN><A href="vw_ingredientclass_search.php" 
+{$advsearchlink_attrs}>Advanced search</A></SPAN>{END asearch_link} </DIV>{END toplinks_block}
+{BEGIN search_records_block}<DIV id="recordcontrolsadd_block{$id}" class=shade><SPAN id="search_records_block{$id}" class=shade>{BEGIN searchform}<!-- Search panel header for horizontal layouts --><SPAN id="searchform{$id}" align="absmiddle"><SPAN id="searchPanelHeader{$id}">{$simpleSearchFieldCombo} {$simpleSearchTypeCombo} {BEGIN searchform_text}<INPUT size=25 {$searchfor_attrs}>{END searchform_text} &nbsp; {BEGIN searchform_search}<SPAN class=buttonborder><INPUT style="BACKGROUND-IMAGE: url(images/search/search.gif); WIDTH: 18px" class=button type=button {$searchbutton_attrs}></SPAN>{END searchform_search} 
+&nbsp; {BEGIN searchform_showall}<SPAN id="showall{$id}" class=buttonborder {$showAllCont_attrs}><INPUT class=button value="Show all" type=button {$showallbutton_attrs}></SPAN>{END searchform_showall} 
+</SPAN>{BEGIN searchPanelTopButtons}<SPAN>&nbsp; <SPAN class=buttonborder><INPUT style="BACKGROUND-IMAGE: url(images/search/showWindowPin.gif); WIDTH: 18px" id="showSrchWin{$id}" class=button type=button {$showHideSearchWin_attrs}></SPAN> 
+&nbsp; <SPAN class=buttonborder><INPUT style="BACKGROUND-IMAGE: url(images/search/showOptions.gif); WIDTH: 18px" id="showOptPanel{$id}" class=button type=button {$showHideSearchPanel_attrs}></SPAN> 
+</SPAN>{END searchPanelTopButtons}</SPAN>{END searchform}{BEGIN details_block}<SPAN {$details_attrs}>Details found: <B>{$records_found}</B>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>{END details_block} 
+{BEGIN pages_block}<SPAN {$pages_attrs}>Page <B>{$page}</B> of <B>{$maxpages}</B></SPAN>{END pages_block} 
+&nbsp;&nbsp;&nbsp;&nbsp; {BEGIN recordspp_block}<!-- class="center_block" -->{$recsPerPage} {END recordspp_block}</SPAN></DIV>{END search_records_block}<!-- search panel and window -->
+<DIV id="searchPanelContainer{$id}" class=searchPanelContainer>{$adv_search_panel} </DIV>
+<DIV moveForSearch="move{$id}" {$marginStyle}>
+{BEGIN recordcontrols_block}<DIV id="record_controls{$id}">{BEGIN newrecord_controls}<SPAN id=newrecords_block>{BEGIN add_link}<SPAN><A 
+href="vw_ingredientclass_add.php" {$addlink_attrs}>Add new</A> 
+</SPAN>{END add_link}</SPAN>{END newrecord_controls}{BEGIN record_controls}{BEGIN deleteselected_link}<SPAN {$deleteselectedlink_span}><A href="#" {$deleteselectedlink_attrs}>Delete 
+selected</A></SPAN>{END deleteselected_link}{END record_controls} </DIV>{END recordcontrols_block}
+<DIV id="usermessage{$id}" class=message>{$user_message}</DIV>
+{BEGIN grid_block}<DIV id="resize_cell{$id}">
+<TABLE id="grid_block{$id}" border=0 cellSpacing=2 cellPadding=3 name="maintable">
+  {BEGIN grid_header}<THEAD>
+  <TR vAlign=top {$gridHeader_attrs}>{BEGIN record_header}
+    {BEGIN listIcons_column}<TH class=blackshade noWrap align=center {$widthListIcons} iEditCont="all">&nbsp;</TH>{END listIcons_column}
+    {BEGIN checkbox_column}<TH class=blackshade width=20 align=left>{BEGIN checkbox_header}<INPUT type=checkbox {$checkboxheader_attrs}> 
+    {END checkbox_header}</TH>{END checkbox_column}
+    {BEGIN IName_fieldheadercolumn}<TH class=blackshade align=left>
+      <P align=center>&nbsp; {BEGIN IName_fieldheader}<A class=defblackshade {$IName_orderlinkattrs}>Ingredient name</A>{END IName_fieldheader} &nbsp; </P></TH>{END IName_fieldheadercolumn}
+    {BEGIN Species_fieldheadercolumn}<TH class=blackshade align=left>
+      <P align=center>&nbsp; {BEGIN Species_fieldheader}<A class=defblackshade {$Species_orderlinkattrs}>Scientific 
+      name</A>{END Species_fieldheader} &nbsp; </P></TH>{END Species_fieldheadercolumn}
+    {BEGIN IfeedNo_fieldheadercolumn}<TH class=blackshade align=left>
+      <P align=center>&nbsp; International feed number&nbsp;&nbsp; </P></TH>{END IfeedNo_fieldheadercolumn}
+    {BEGIN vw_ingredientclass_dtable_column}<TH class=blackshade align=left><P align=center>More 
+      Details</P></TH>{END vw_ingredientclass_dtable_column}
+    {BEGIN endrecordheader_block}<TH>&nbsp;</TH>{END endrecordheader_block}{END record_header}</TR></THEAD>{END grid_header}
+  <TBODY>{BEGIN grid_row}
+  <TR vAlign=top {$rowstyle} {$rowattrs}>{BEGIN grid_record}
+    {BEGIN listIcons_column}<TD class=listIcons vAlign=middle noWrap align=left iEditCont="all">{BEGIN edit_column}{BEGIN edit_link}<A title=Edit {$editlink_attrs}><IMG class=listIcon 
+      border=0 alt=Edit align=middle src="images/icon_edit_new.gif"></A>{END edit_link}{END edit_column} {BEGIN copy_column}{BEGIN copy_link}<A title=Copy {$copylink_attrs}><IMG 
+      class=listIcon border=0 alt=Copy align=middle 
+      src="images/icon_copy_new.gif"></A>{END copy_link}{END copy_column} {BEGIN view_column}{BEGIN view_link}<A title=View {$viewlink_attrs}><IMG class=listIcon 
+      border=0 alt=View align=middle src="images/icon_view_new.gif"></A>{END view_link}{END view_column} </TD>{END listIcons_column}
+    {BEGIN checkbox_column}<TD vAlign=middle width=20 align=left>{BEGIN checkbox}<INPUT type=checkbox {$checkbox_attrs}> {END checkbox}</TD>{END checkbox_column}
+    {BEGIN IName_fieldcolumn}<TD vAlign=middle {$IName_style}>
+      <P align=center>{$IName_value} 
+      </P></TD>{END IName_fieldcolumn}
+    {BEGIN Species_fieldcolumn}<TD vAlign=middle {$Species_style}>
+      <P align=center>{$Species_value} </P></TD>{END Species_fieldcolumn}
+    {BEGIN IfeedNo_fieldcolumn}<TD vAlign=middle {$IfeedNo_style}>
+      <P>{$IfeedNo_value} </P></TD>{END IfeedNo_fieldcolumn}
+    {BEGIN vw_ingredientclass_dtable_column}<TD vAlign=middle noWrap align=left>{BEGIN vw_fullingredientelementanalysis_dtable_link}<A 
+      {$vw_fullingredientelementanalysis_dtablelink_attrs}><FONT color=#005500 
+      size=2><STRONG>Ingredient element analysis</STRONG></FONT> <SPAN {$vw_fullingredientelementanalysis_childnumber_attr}>{BEGIN vw_fullingredientelementanalysis_childcount}({$vw_fullingredientelementanalysis_childnumber}){END vw_fullingredientelementanalysis_childcount}</SPAN>&nbsp;</A>&nbsp; 
+      <BR>{END vw_fullingredientelementanalysis_dtable_link}{BEGIN vw_fullingredientproxanalysis_dtable_link}<A 
+      {$vw_fullingredientproxanalysis_dtablelink_attrs}><FONT color=#0000ff 
+      size=2><STRONG>Ingredient proximate composition</STRONG></FONT> <SPAN {$vw_fullingredientproxanalysis_childnumber_attr}>{BEGIN vw_fullingredientproxanalysis_childcount}({$vw_fullingredientproxanalysis_childnumber}){END vw_fullingredientproxanalysis_childcount}</SPAN>&nbsp;</A>&nbsp; 
+      <BR>{END vw_fullingredientproxanalysis_dtable_link}{BEGIN vw_ingredientspecassociation_dtable_link}<A 
+      {$vw_ingredientspecassociation_dtablelink_attrs}><STRONG><FONT 
+      color=#00008b size=2>Ingredients association</FONT></STRONG> <SPAN {$vw_ingredientspecassociation_childnumber_attr}>{BEGIN vw_ingredientspecassociation_childcount}({$vw_ingredientspecassociation_childnumber}){END vw_ingredientspecassociation_childcount}</SPAN> 
+      </A>&nbsp; {END vw_ingredientspecassociation_dtable_link}</TD>{END vw_ingredientclass_dtable_column}
+    {BEGIN endrecord_block}<TD class=body2 {$endrecordblock_attrs}>&nbsp;</TD>{END endrecord_block}{END grid_record}</TR>{END grid_row}</TBODY></TABLE></DIV>{END grid_block}</DIV>
+{BEGIN pagination_block}<DIV id="pagination_block{$id}" class=toplist align=center>{$pagination}</DIV>{END pagination_block}
+{BEGIN message_block}<DIV id="message_block{$id}" class=toplist align=center valign="middle"><B>{$message}</B></DIV>{END message_block}</DIV>{$footer} {END body}</BODY></HTML>

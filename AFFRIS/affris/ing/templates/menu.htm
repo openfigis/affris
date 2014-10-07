@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->
+<STYLE>
+#center_block {width:35%;margin:0 auto;min-width:300px}
+#header_block {padding:2px 5px 6px;line-height: 1.8}
+#tables_block {width:100%;margin:0}
+#header_block > span {margin:2 5px}
+#login_top span {padding-right:10px}
+.captions {padding:6px 0px;}
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 9.00.8112.16430"></HEAD>
+<BODY>{BEGIN body}{$header} 
+<TABLE id=center_block>
+  <TBODY>
+  <TR>
+    <TD>{BEGIN loggedas_block}
+      <DIV id=header_block><SPAN>Logged on as <B>{$username}</B></SPAN> {END loggedas_block}{BEGIN logout_link}<A href="login.php?a=logout" {$logoutlink_attrs}>Log out</A>{END logout_link} 
+      <HR style="size: 1; noshade: noshade">
+
+      <DIV id=tables_block><!-- MenuBegin -->{$mainmenu}<!-- MenuEnd --></DIV></DIV></TD></TR></TBODY></TABLE>{$footer} {END body}</BODY></HTML>

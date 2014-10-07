@@ -1,0 +1,348 @@
+<html {$html_attrs}>
+<head><title>Vw Ingredientspecassociation</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+{BEGIN style_block}
+<style>
+#center_block{$id} {width:500px;margin:0 auto;}
+#contents_block{$id} {text-align:center;width:100%}
+#header_block{$id} {width:100%;white-space:nowrap;height:31px;padding:5px 0;}
+#fields_block{$id} {width:100%}
+#fields_block{$id} td {padding-left:10px}
+#buttons_block{$id} {width:100%;padding-bottom:5px;text-align:center}
+#required_block{$id} {text-align:left;padding:5px}
+#span{$id} {margin:0 20px 0 20px;}
+</style>
+{END style_block}
+</head>
+<body {$bodyattrs}>
+{BEGIN body}
+{$header}
+{BEGIN flybody}
+<table id="center_block{$id}" align="center"><tr><td id="contents_block{$id}">
+<div id="header_block{$id}">
+<h1>
+Vw Ingredientspecassociation, Edit record [
+Ingredient ID: {$show_key1}
+]
+</h1>
+</div>
+{BEGIN message_block}
+<DIV id="message_block{$id}" class="downedit">
+{$message}
+</div>
+{END message_block}
+
+<div align=left><hr width="100%" noshade size=1></div>
+{BEGIN back_button}
+&nbsp;&nbsp;&nbsp;<a href="vw_ingredientspecassociation_list.php?a=return" {$backbutton_attrs}>Back to list</a><br><br>
+{END back_button}
+
+<table cellpadding=4 cellspacing=2 border=0 id="fields_block{$id}">
+{BEGIN IngredientID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IngredientID_label}Ingredient ID{END IngredientID_label}
+		</td>
+		<td width="250">
+			{$IngredientID_editcontrol}
+		</td>
+	</tr>
+{END IngredientID_fieldblock}
+{BEGIN IName_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IName_label}IName{END IName_label}
+		</td>
+		<td width="250">
+			{$IName_editcontrol}
+		</td>
+	</tr>
+{END IName_fieldblock}
+{BEGIN IfeedNo_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IfeedNo_label}Ifeed No{END IfeedNo_label}
+		</td>
+		<td width="250">
+			{$IfeedNo_editcontrol}
+		</td>
+	</tr>
+{END IfeedNo_fieldblock}
+{BEGIN Description1_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Description1_label}Description1{END Description1_label}
+		</td>
+		<td width="250">
+			{$Description1_editcontrol}
+		</td>
+	</tr>
+{END Description1_fieldblock}
+{BEGIN Description2_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Description2_label}Description2{END Description2_label}
+		</td>
+		<td width="250">
+			{$Description2_editcontrol}
+		</td>
+	</tr>
+{END Description2_fieldblock}
+{BEGIN Description3_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Description3_label}Description3{END Description3_label}
+		</td>
+		<td width="250">
+			{$Description3_editcontrol}
+		</td>
+	</tr>
+{END Description3_fieldblock}
+{BEGIN IisDetail_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IisDetail_label}Iis Detail{END IisDetail_label}
+		</td>
+		<td width="250">
+			{$IisDetail_editcontrol}
+		</td>
+	</tr>
+{END IisDetail_fieldblock}
+{BEGIN IDSourceID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IDSourceID_label}IDSource ID{END IDSourceID_label}
+		</td>
+		<td width="250">
+			{$IDSourceID_editcontrol}
+		</td>
+	</tr>
+{END IDSourceID_fieldblock}
+{BEGIN DataSource_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN DataSource_label}Data Source{END DataSource_label}
+		</td>
+		<td width="250">
+			{$DataSource_editcontrol}
+		</td>
+	</tr>
+{END DataSource_fieldblock}
+{BEGIN CountryID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN CountryID_label}Country ID{END CountryID_label}
+		</td>
+		<td width="250">
+			{$CountryID_editcontrol}
+		</td>
+	</tr>
+{END CountryID_fieldblock}
+{BEGIN ICountry_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN ICountry_label}ICountry{END ICountry_label}
+		</td>
+		<td width="250">
+			{$ICountry_editcontrol}
+		</td>
+	</tr>
+{END ICountry_fieldblock}
+{BEGIN IngredientSpecID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IngredientSpecID_label}Ingredient Spec ID{END IngredientSpecID_label}
+		</td>
+		<td width="250">
+			{$IngredientSpecID_editcontrol}
+		</td>
+	</tr>
+{END IngredientSpecID_fieldblock}
+{BEGIN Species_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Species_label}Species{END Species_label}
+		</td>
+		<td width="250">
+			{$Species_editcontrol}
+		</td>
+	</tr>
+{END Species_fieldblock}
+{BEGIN SpeciesID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN SpeciesID_label}Species ID{END SpeciesID_label}
+		</td>
+		<td width="250">
+			{$SpeciesID_editcontrol}
+		</td>
+	</tr>
+{END SpeciesID_fieldblock}
+{BEGIN SpecName_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN SpecName_label}Spec Name{END SpecName_label}
+		</td>
+		<td width="250">
+			{$SpecName_editcontrol}
+		</td>
+	</tr>
+{END SpecName_fieldblock}
+{BEGIN CommonName_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN CommonName_label}Common Name{END CommonName_label}
+		</td>
+		<td width="250">
+			{$CommonName_editcontrol}
+		</td>
+	</tr>
+{END CommonName_fieldblock}
+{BEGIN Hybrid_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Hybrid_label}Hybrid{END Hybrid_label}
+		</td>
+		<td width="250">
+			{$Hybrid_editcontrol}
+		</td>
+	</tr>
+{END Hybrid_fieldblock}
+{BEGIN Variety_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Variety_label}Variety{END Variety_label}
+		</td>
+		<td width="250">
+			{$Variety_editcontrol}
+		</td>
+	</tr>
+{END Variety_fieldblock}
+{BEGIN Family_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Family_label}Family{END Family_label}
+		</td>
+		<td width="250">
+			{$Family_editcontrol}
+		</td>
+	</tr>
+{END Family_fieldblock}
+{BEGIN Group_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Group_label}Group{END Group_label}
+		</td>
+		<td width="250">
+			{$Group_editcontrol}
+		</td>
+	</tr>
+{END Group_fieldblock}
+{BEGIN Genus_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Genus_label}Genus{END Genus_label}
+		</td>
+		<td width="250">
+			{$Genus_editcontrol}
+		</td>
+	</tr>
+{END Genus_fieldblock}
+{BEGIN Environment_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Environment_label}Environment{END Environment_label}
+		</td>
+		<td width="250">
+			{$Environment_editcontrol}
+		</td>
+	</tr>
+{END Environment_fieldblock}
+{BEGIN FeedHabit_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN FeedHabit_label}Feed Habit{END FeedHabit_label}
+		</td>
+		<td width="250">
+			{$FeedHabit_editcontrol}
+		</td>
+	</tr>
+{END FeedHabit_fieldblock}
+{BEGIN Country_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Country_label}Country{END Country_label}
+		</td>
+		<td width="250">
+			{$Country_editcontrol}
+		</td>
+	</tr>
+{END Country_fieldblock}
+{BEGIN SpecYear_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN SpecYear_label}Spec Year{END SpecYear_label}
+		</td>
+		<td width="250">
+			{$SpecYear_editcontrol}
+		</td>
+	</tr>
+{END SpecYear_fieldblock}
+{BEGIN lower_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN lower_label}Lower{END lower_label}
+		</td>
+		<td width="250">
+			{$lower_editcontrol}
+		</td>
+	</tr>
+{END lower_fieldblock}
+{BEGIN upper_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN upper_label}Upper{END upper_label}
+		</td>
+		<td width="250">
+			{$upper_editcontrol}
+		</td>
+	</tr>
+{END upper_fieldblock}
+</table>
+
+<div id="buttons_block{$id}">
+{BEGIN back_button}
+<br>&nbsp;&nbsp;&nbsp;<a href="vw_ingredientspecassociation_list.php?a=return" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+<div align=left><hr width="100%" noshade size=1></div>
+{BEGIN legend}
+<div id="required_block{$id}" ><img alt="bullet" src="images/icon_required.gif"> - Required field</div>
+{END legend}
+{$legendBreak}
+{BEGIN save_button}
+ <input class=button type=submit value="Save" {$savebutton_attrs}>
+{END save_button}
+{BEGIN reset_button}
+ <input class=button type=reset value="Reset" {$resetbutton_attrs}>
+{END reset_button}
+<span id="span{$id}">&nbsp;</span>
+{BEGIN prev_button}
+<input class=button type=reset value=" <<< " {$prevbutton_attrs}>
+{END prev_button}
+{BEGIN next_button}
+<input class=button type=reset value=" >>> " {$nextbutton_attrs}>
+{END next_button}
+</div>
+</td></tr></table>
+{END flybody}
+
+{BEGIN detail_tables}
+{END detail_tables}
+<br><br>
+{$footer}
+{END body}
+</body>
+</html>

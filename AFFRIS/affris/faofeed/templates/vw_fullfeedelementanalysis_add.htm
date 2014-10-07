@@ -1,0 +1,110 @@
+<html {$html_attrs}>
+<head><title>Vw Fullfeedelementanalysis</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+<style>
+#center_block{$id} {width:500px;margin:0 auto;}
+#contents_block{$id} {text-align:center;}
+#header_block{$id} {white-space:nowrap;height:31px;padding-top:5px;}
+#fields_block{$id} {width:100%}
+#buttons_block{$id} {padding-bottom:5px;white-space:nowrap;text-align:center;}
+#required_block{$id} {text-align:left;padding:5px}
+#message_block{$id} {padding:5px 0px}
+</style>
+</head>
+<body>
+{BEGIN body}
+{$header}
+<TABLE id="center_block{$id}" cellpadding=0 cellspacing=0><tr><td id="header_block{$id}">
+{BEGIN flybody}
+
+<div id="header_block{$id}">
+<h1>Vw Fullfeedelementanalysis, Add new record</h1>
+</div>
+
+{BEGIN message_block}
+<div id="message_block{$id}">{$message}</div>
+{END message_block}
+
+<div align=left><hr width=300 noshade size=1></div>
+
+&nbsp;&nbsp;&nbsp;<a href="vw_fullfeedelementanalysis_list.php?a=return">Back to list</a><br><br>
+
+<table cellpadding=4 cellspacing=2 border=0 id="fields_block{$id}">
+{BEGIN FeedID_fieldblock}
+  <tr><td class=shade  width=150>Feed ID</td><td width=250>
+    {$FeedID_editcontrol}
+      &nbsp;<img src="images/icon_required.gif">
+  </td></tr>
+{END FeedID_fieldblock}
+{BEGIN ElementID_fieldblock}
+  <tr><td class=shade  width=150>Element ID</td><td width=250>
+    {$ElementID_editcontrol}
+    </td></tr>
+{END ElementID_fieldblock}
+{BEGIN EName_fieldblock}
+  <tr><td class=shade  width=150>Element Name</td><td width=250>
+    {$EName_editcontrol}
+    </td></tr>
+{END EName_fieldblock}
+{BEGIN CommonName_fieldblock}
+  <tr><td class=shade  width=150>Symbol/Common Name</td><td width=250>
+    {$CommonName_editcontrol}
+    </td></tr>
+{END CommonName_fieldblock}
+{BEGIN TagName_fieldblock}
+  <tr><td class=shade  width=150>Technical description</td><td width=250>
+    {$TagName_editcontrol}
+    </td></tr>
+{END TagName_fieldblock}
+{BEGIN UnitID_fieldblock}
+  <tr><td class=shade  width=150>Unit ID</td><td width=250>
+    {$UnitID_editcontrol}
+    </td></tr>
+{END UnitID_fieldblock}
+{BEGIN UnitName_fieldblock}
+  <tr><td class=shade  width=150>Unit Symbol</td><td width=250>
+    {$UnitName_editcontrol}
+    </td></tr>
+{END UnitName_fieldblock}
+{BEGIN UnitSymbol_fieldblock}
+  <tr><td class=shade  width=150>Unit Symbol</td><td width=250>
+    {$UnitSymbol_editcontrol}
+    </td></tr>
+{END UnitSymbol_fieldblock}
+{BEGIN UnitDecimal_fieldblock}
+  <tr><td class=shade  width=150>Unit Decimal</td><td width=250>
+    {$UnitDecimal_editcontrol}
+    </td></tr>
+{END UnitDecimal_fieldblock}
+{BEGIN iValue_fieldblock}
+  <tr><td class=shade  width=150>Inclusion</td><td width=250>
+    {$iValue_editcontrol}
+    </td></tr>
+{END iValue_fieldblock}
+</table>
+
+<div id="buttons_block{$id}">
+<div align=left><hr width=300 noshade size=1></div>
+<div id="required_block{$id}" ><img src="images/icon_required.gif"> - Required field</div>
+
+{BEGIN save_button}
+ <input class=button type=submit value="Save" name=submit1>
+{END save_button}
+{BEGIN reset_button}
+ <input class=button type=reset value="Reset" {$resetbutton_attrs}>
+{END reset_button}
+{BEGIN cancel_button}
+ <input class=button type=button value="Cancel" {$cancelbutton_attrs}>
+{END cancel_button}
+</div>
+{END flybody}
+</td></tr>
+</table>
+{$footer}
+{END body}
+</body>
+</html>
+

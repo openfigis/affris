@@ -1,0 +1,27 @@
+<span id="searchform{$id}" align="absmiddle">
+	<span id="searchPanelHeader{$id}">  
+		{$simpleSearchFieldCombo}
+		
+		{$simpleSearchTypeCombo}
+		
+		{BEGIN searchform_text}
+		<input type="text" {$searchfor_attrs} size="25">
+		{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}
+			<span class="buttonborder"><input class="button" type="button" style="width: 18px; background-image: url(images/search/search.gif);" {$searchbutton_attrs} ></span>
+		{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}	
+		<span id="showall{$id}" class="buttonborder" {$showAllCont_attrs}><input type="button" class="button" value="##message SHOW_ALL##" {$showallbutton_attrs}></span>
+		{END searchform_showall}
+	</span>
+	{BEGIN searchPanelTopButtons}
+	<span>
+		&nbsp;
+		<span class="buttonborder"><input class="button" type="button" id="showSrchWin{$id}" style="width: 18px; background-image: url(images/search/showWindowPin.gif);" {$showHideSearchWin_attrs} ></span>
+		&nbsp;		
+		<span class="buttonborder"><input class="button" type="button" id="showOptPanel{$id}" style="width: 18px; background-image: url(images/search/showOptions.gif);" {$showHideSearchPanel_attrs} ></span>
+	</span>
+	{END searchPanelTopButtons}
+</span>

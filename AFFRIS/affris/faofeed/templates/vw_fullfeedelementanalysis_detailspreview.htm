@@ -1,0 +1,34 @@
+<iframe id="iframe" 
+		style="position:absolute;
+               border:none;
+			   left:-1px; 
+			   top:-1px; 
+			   filter:alpha(opacity=0);
+			   z-index:-1;"> 
+</iframe>
+Vw Fullfeedelementanalysis<br>
+Details found: <strong>{$row_count}.</strong>
+{BEGIN display_first}
+<span>Displaying first: <strong>{$display_count}</strong>.</span>
+{END display_first}
+
+{BEGIN details_data}
+<table cellpadding=1 cellspacing=1 border=0  class="detailtable">
+<tr>
+<td><strong>Symbol/Common Name</strong></td>
+<td><strong>Element Name</strong></td>
+<td><strong>Technical description</strong></td>
+<td><strong>Inclusion</strong></td>
+<td><strong>Unit Symbol</strong></td>
+</tr>
+{BEGIN details_row}
+<tr>
+<td>{$CommonName_value}</td>
+<td>{$EName_value}</td>
+<td>{$TagName_value}</td>
+<td>{$iValue_value}</td>
+<td>{$UnitName_value}</td>
+</tr>
+{END details_row}
+</table>
+{END details_data}

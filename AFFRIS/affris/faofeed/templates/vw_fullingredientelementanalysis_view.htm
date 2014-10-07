@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Vw Fullingredientelementanalysis</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->
+<STYLE>
+#center_block{$id} {width:55%;margin:0 auto;min-width: 500px;}
+#contents_block{$id} {text-align:center;}
+#header_block{$id} {white-space:nowrap;height:31px;padding:5px;}
+#fields_block{$id} {width:100%}
+#buttons_block{$id} {padding:5px;white-space:nowrap;text-align:center;}
+#required_block{$id} {text-align:left;padding:5px}
+#span {margin:0 20px 0 20px;}
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16588"></HEAD>
+<BODY>{BEGIN body}{$header} 
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=400>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id="header_block{$id}">
+      <H1>&nbsp;Ingredient ID: {$show_key1} </H1></DIV>
+      <DIV align=left>
+      <HR SIZE=1 width=300 noShade>
+      </DIV>&nbsp;&nbsp;&nbsp;<A 
+      href="vw_fullingredientelementanalysis_list.php?a=return">Back to 
+      list</A><BR><BR>
+      <TABLE id="fields_block{$id}" border=0 cellSpacing=2 cellPadding=4>
+        <TBODY>
+        {BEGIN EName_fieldblock}<TR>
+          <TD class=shade width=150>Element Name</TD>
+          <TD width=250>{$EName_value}&nbsp; </TD></TR>{END EName_fieldblock}
+        {BEGIN CommonName_fieldblock}<TR>
+          <TD class=shade width=150>Symbol/Common Name</TD>
+          <TD width=250>{$CommonName_value}&nbsp; </TD></TR>{END CommonName_fieldblock}
+        {BEGIN TagName_fieldblock}<TR>
+          <TD class=shade width=150>Technical description</TD>
+          <TD width=250>{$TagName_value}&nbsp; </TD></TR>{END TagName_fieldblock}
+        {BEGIN Description_fieldblock}<TR>
+          <TD class=shade width=150>Category</TD>
+          <TD width=250>{$Description_value}&nbsp; </TD></TR>{END Description_fieldblock}
+        {BEGIN IValue_fieldblock}<TR>
+          <TD class=shade width=150>Inclusion</TD>
+          <TD width=250>{$IValue_value}&nbsp; 
+      </TD></TR>{END IValue_fieldblock}</TBODY></TABLE><BR>&nbsp;&nbsp;&nbsp;<A 
+      href="vw_fullingredientelementanalysis_list.php?a=return">Back to list</A> 
+      <SPAN id=span>&nbsp;</SPAN> {BEGIN prev_button}<INPUT class=button value=" <<< " type=reset {$prevbutton_attrs}>{END prev_button} 
+{BEGIN next_button}<INPUT class=button value=" >>> " type=reset {$nextbutton_attrs}>{END next_button} 
+      <BR><BR></TD></TR></TBODY></TABLE>{$footer} {END body}</BODY></HTML>

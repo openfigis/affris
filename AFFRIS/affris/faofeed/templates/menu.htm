@@ -1,0 +1,37 @@
+<html {$html_attrs}>
+<head>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+<style>
+#center_block {width:35%;margin:0 auto;min-width:300px}
+#header_block {padding:2px 5px 6px;line-height: 1.8}
+#tables_block {width:100%;margin:0}
+#header_block > span {margin:2 5px}
+#login_top span {padding-right:10px}
+.captions {padding:6px 0px;}
+</style>
+</head>
+<body>
+{BEGIN body}
+{$header}
+<table id="center_block"><tr><td>
+{BEGIN loggedas_block}
+<div id="header_block">
+<span>Logged on as <b>{$username}</b></span>
+{END loggedas_block}
+{BEGIN logout_link}
+<a href="login.php?a=logout">Log out</a>
+{END logout_link}
+<hr style="size:1;noshade=noshade" />
+<div id="tables_block">
+<!-- MenuBegin -->
+{$mainmenu}
+<!-- MenuEnd -->
+</div>
+</td></tr></table>
+{$footer}
+{END body}
+</body>
+</html>

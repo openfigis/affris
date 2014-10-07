@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML 
+{$html_attrs}><HEAD><TITLE>Feed ingredient details: Advanced search page</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->
+<STYLE>
+#center_block{$id} {margin:0 auto;}
+#contents_block{$id} {text-align:center;width:100%}
+#header_block{$id} {white-space:nowrap;height:31px;padding-top:5px;}
+#main_block{$id} {padding:10px 0;width:100%}
+#inmain_block{$id} {margin:0 10px}
+#fields_block{$id} {width:100%}
+#buttons_block{$id} {width:100%;padding:10px 0;}
+#buttons_block{$id} > * {margin:0 2px}
+</STYLE>
+<!--[if IE]>
+<STYLE>
+#main_block {padding:10px 10;}
+#inmain_block {margin:0 0px}
+</STYLE>
+<![endif]-->
+<META name=GENERATOR content="MSHTML 9.00.8112.16430"></HEAD>
+<BODY bgColor=white {$bodyattrs}>{BEGIN body}{$header} 
+{BEGIN contents_block}<TABLE style="BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid" id="center_block{$id}" align=center>
+  <TBODY>
+  <TR>
+    <TD id="contents_block{$id}">
+      <DIV id="header_block{$id}" class=tableheader>Feed ingredient details 
+      - Advanced search </DIV>
+      {BEGIN conditions_block}<DIV id="conditions_block{$id}"><SPAN 
+      class=fieldname>Search for: </SPAN><INPUT name=srchType type=radio 
+      {$all_checkbox}>{BEGIN all_checkbox_label}All conditions{END all_checkbox_label} &nbsp;&nbsp;&nbsp; <INPUT 
+      name=srchType type=radio 
+      {$any_checkbox}>{BEGIN any_checkbox_label}Any condition{END any_checkbox_label} </DIV>{END conditions_block}
+      <TABLE id="fields_block{$id}" border=0 cellSpacing=0 cellPadding=4>
+        <TBODY>
+        <TR class=blackshade vAlign=middle>
+          <TD vAlign=middle align=center>&nbsp;</TD>
+          <TD class=fieldname vAlign=middle width=30 align=center>NOT</TD>
+          <TD vAlign=middle colSpan=3 align=center>&nbsp; </TD></TR>
+        {BEGIN Description2_fieldblock}<TR class=shade>
+          <TD class=fieldname>Major ingredient classification 
+          <TD align=center><INPUT type=checkbox {$Description2_notbox}></TD>
+          <TD>{$searchtype_Description2}</TD>
+          <TD width=270>{$Description2_editcontrol}&nbsp;</TD>
+          <TD width=270>{$Description2_editcontrol1}&nbsp;</TD></TR>{END Description2_fieldblock}
+        {BEGIN Description4_fieldblock}<TR class=shade>
+          <TD class=fieldname>Sub-classification 
+          <TD align=center><INPUT type=checkbox {$Description4_notbox}></TD>
+          <TD>{$searchtype_Description4}</TD>
+          <TD width=270>{$Description4_editcontrol}&nbsp;</TD>
+          <TD width=270>{$Description4_editcontrol1}&nbsp;</TD></TR>{END Description4_fieldblock}
+        {BEGIN IName_fieldblock}<TR class=shade>
+          <TD class=fieldname>Ingredient name 
+          <TD align=center><INPUT type=checkbox {$IName_notbox}></TD>
+          <TD>{$searchtype_IName}</TD>
+          <TD width=270>{$IName_editcontrol}&nbsp;</TD>
+          <TD width=270>{$IName_editcontrol1}&nbsp;</TD></TR>{END IName_fieldblock}</TBODY></TABLE>
+      <DIV id="buttons_block{$id}" class=blackshade>{BEGIN search_button}<SPAN class=buttonborder><INPUT class=button value=Search type=button {$searchbutton_attrs}></SPAN>{END search_button} 
+      {BEGIN reset_button}<SPAN class=buttonborder><INPUT class=button value=Reset type=button {$resetbutton_attrs}></SPAN>{END reset_button} 
+      {BEGIN back_button}<SPAN class=buttonborder><INPUT class=button value="Back to list" type=button {$backbutton_attrs}></SPAN>{END back_button} 
+      </DIV></TD></TR></TBODY></TABLE>{END contents_block}{$footer} {END body}</BODY></HTML>

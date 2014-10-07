@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Vw Feed: Advanced search page</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->
+<STYLE>
+#center_block {margin:0 auto;}
+#contents_block {text-align:center;width:100%}
+#header_block {white-space:nowrap;height:31px;padding-top:5px;}
+#main_block {padding:10px 0;width:100%}
+#inmain_block {margin:0 10px}
+#fields_block {width:100%}
+#buttons_block {width:100%;padding:10px 0;}
+#buttons_block > * {margin:0 2px}
+</STYLE>
+<!--[if IE]>
+<STYLE>
+#main_block {padding:10px 10;}
+#inmain_block {margin:0 0px}
+</STYLE>
+<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.7600.16535"></HEAD>
+<BODY bgColor=white>{BEGIN body}{$header} 
+{BEGIN contents_block}<TABLE style="BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid" id=center_block align=center>
+  <TBODY>
+  <TR>
+    <TD id=contents_block>
+      <DIV id=header_block class=tableheader>List Feed Details - Advanced search 
+      </DIV>
+      {BEGIN conditions_block}<DIV id=conditions_block><SPAN 
+      class=fieldname>Search for: </SPAN><INPUT type=radio name=type 
+      {$all_checkbox}>All conditions &nbsp;&nbsp;&nbsp; <INPUT type=radio 
+      name=type {$any_checkbox}>Any condition </DIV>{END conditions_block}
+      <TABLE id=fields_block border=0 cellSpacing=0 cellPadding=4>
+        <TBODY>
+        <TR class=blackshade vAlign=middle>
+          <TD vAlign=middle align=middle>&nbsp;</TD>
+          <TD class=fieldname vAlign=middle width=30 align=middle>NOT</TD>
+          <TD vAlign=middle colSpan=3 align=middle>&nbsp; </TD></TR>
+        {BEGIN FName_fieldblock}<TR class=shade>
+          <TD class=fieldname>Feed Name 
+          <TD align=middle><INPUT type=checkbox {$FName_notbox}></TD>
+          <TD>{$searchtype_FName}</TD>
+          <TD width=270>{$FName_editcontrol}</TD>
+          <TD width=270><SPAN id=second_FName>{$FName_editcontrol1} 
+          </SPAN></TD></TR>{END FName_fieldblock}
+        {BEGIN BrandName_fieldblock}<TR class=shade>
+          <TD class=fieldname>Brand Name 
+          <TD align=middle><INPUT type=checkbox {$BrandName_notbox}></TD>
+          <TD>{$searchtype_BrandName}</TD>
+          <TD width=270>{$BrandName_editcontrol}</TD>
+          <TD width=270><SPAN id=second_BrandName>{$BrandName_editcontrol1} 
+            </SPAN></TD></TR>{END BrandName_fieldblock}
+        {BEGIN Technology_fieldblock}<TR class=shade>
+          <TD class=fieldname>Technology 
+          <TD align=middle><INPUT type=checkbox {$Technology_notbox}></TD>
+          <TD>{$searchtype_Technology}</TD>
+          <TD width=270>{$Technology_editcontrol}</TD>
+          <TD width=270><SPAN id=second_Technology>{$Technology_editcontrol1} 
+            </SPAN></TD></TR>{END Technology_fieldblock}
+        {BEGIN FeedYear_fieldblock}<TR class=shade>
+          <TD class=fieldname>Feed Year 
+          <TD align=middle><INPUT type=checkbox {$FeedYear_notbox}></TD>
+          <TD>{$searchtype_FeedYear}</TD>
+          <TD width=270>{$FeedYear_editcontrol}</TD>
+          <TD width=270><SPAN id=second_FeedYear>{$FeedYear_editcontrol1} 
+            </SPAN></TD></TR>{END FeedYear_fieldblock}
+        {BEGIN Stage_fieldblock}<TR class=shade>
+          <TD class=fieldname>Stage 
+          <TD align=middle><INPUT type=checkbox {$Stage_notbox}></TD>
+          <TD>{$searchtype_Stage}</TD>
+          <TD width=270>{$Stage_editcontrol}</TD>
+          <TD width=270><SPAN id=second_Stage>{$Stage_editcontrol1} 
+          </SPAN></TD></TR>{END Stage_fieldblock}
+        {BEGIN CountryOrigin_fieldblock}<TR class=shade>
+          <TD class=fieldname>Country Origin 
+          <TD align=middle><INPUT type=checkbox {$CountryOrigin_notbox}></TD>
+          <TD>{$searchtype_CountryOrigin}</TD>
+          <TD width=270>{$CountryOrigin_editcontrol}</TD>
+          <TD width=270><SPAN id=second_CountryOrigin>{$CountryOrigin_editcontrol1} 
+</SPAN></TD></TR>{END CountryOrigin_fieldblock}
+        {BEGIN FDataSource_fieldblock}<TR class=shade>
+          <TD class=fieldname>Data Source 
+          <TD align=middle><INPUT type=checkbox {$FDataSource_notbox}></TD>
+          <TD>{$searchtype_FDataSource}</TD>
+          <TD width=270>{$FDataSource_editcontrol}</TD>
+          <TD width=270><SPAN id=second_FDataSource>{$FDataSource_editcontrol1} 
+            </SPAN></TD></TR>{END FDataSource_fieldblock}
+        {BEGIN FeedType_fieldblock}<TR class=shade>
+          <TD class=fieldname>Feed Type 
+          <TD align=middle><INPUT type=checkbox {$FeedType_notbox}></TD>
+          <TD>{$searchtype_FeedType}</TD>
+          <TD width=270>{$FeedType_editcontrol}</TD>
+          <TD width=270><SPAN id=second_FeedType>{$FeedType_editcontrol1} 
+            </SPAN></TD></TR>{END FeedType_fieldblock}</TBODY></TABLE>
+      <DIV id=buttons_block class=blackshade>{BEGIN search_button}<SPAN class=buttonborder><INPUT class=button value=Search type=button {$searchbutton_attrs}></SPAN>{END search_button} 
+      {BEGIN reset_button}<SPAN class=buttonborder><INPUT class=button value=Reset type=button {$resetbutton_attrs}></SPAN>{END reset_button} 
+      {BEGIN back_button}<SPAN class=buttonborder><INPUT class=button value="Back to list" type=button {$backbutton_attrs}></SPAN>{END back_button} 
+      </DIV></TD></TR></TBODY></TABLE>{END contents_block}{$footer} {END body}</BODY></HTML>

@@ -1,0 +1,140 @@
+<html {$html_attrs}>
+<head>
+<title>Proximate analysis of feed ingredient: Advanced search page</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+<style>
+#center_block{$id} {margin:0 auto;}
+#contents_block{$id} {text-align:center;width:100%}
+#header_block{$id} {white-space:nowrap;height:31px;padding-top:5px;}
+#main_block{$id} {padding:10px 0;width:100%}
+#inmain_block{$id} {margin:0 10px}
+#fields_block{$id} {width:100%}
+#buttons_block{$id} {width:100%;padding:10px 0;}
+#buttons_block{$id} > * {margin:0 2px}
+</style>
+<!--[if IE]>
+<style>
+#main_block {padding:10px 10;}
+#inmain_block {margin:0 0px}
+</style>
+<![endif]-->
+</head>
+<body bgcolor=white {$bodyattrs}>
+{BEGIN body}
+{$header}	
+{BEGIN contents_block}
+<table align=center id="center_block{$id}" style="BORDER: #cccccc 1px solid;"><tr><td id="contents_block{$id}">
+	
+<div id="header_block{$id}" class=tableheader>
+Proximate analysis of feed ingredient - Advanced search
+</div>
+
+{BEGIN conditions_block}
+<DIV id="conditions_block{$id}">
+<span class=fieldname>Search for: </span>
+<input type="radio" name="srchType" {$all_checkbox}>{BEGIN all_checkbox_label}All conditions{END all_checkbox_label}
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="srchType" {$any_checkbox}>{BEGIN any_checkbox_label}Any condition{END any_checkbox_label}
+</div>
+{END conditions_block}
+
+<table cellpadding=4 cellspacing=0 border=0 id="fields_block{$id}">
+<tr valign=center class=blackshade>
+<td align=center valign=middle>&nbsp;</td>
+<td width=30 align=center valign=middle class=fieldname>NOT</td>
+<td colspan=3 align=center valign=middle>&nbsp; </td></tr>
+
+{BEGIN IngredientID_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Ingredient ID
+	<td align=center><input type=checkbox {$IngredientID_notbox}></td>
+	<td>{$searchtype_IngredientID}</td>
+	<td width=270>{$IngredientID_editcontrol}&nbsp;</td>
+    <td width=270>{$IngredientID_editcontrol1}&nbsp;</td>
+</tr>
+{END IngredientID_fieldblock}	
+{BEGIN ElementTypeID_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Element Type ID
+	<td align=center><input type=checkbox {$ElementTypeID_notbox}></td>
+	<td>{$searchtype_ElementTypeID}</td>
+	<td width=270>{$ElementTypeID_editcontrol}&nbsp;</td>
+    <td width=270>{$ElementTypeID_editcontrol1}&nbsp;</td>
+</tr>
+{END ElementTypeID_fieldblock}	
+{BEGIN Description_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Description
+	<td align=center><input type=checkbox {$Description_notbox}></td>
+	<td>{$searchtype_Description}</td>
+	<td width=270>{$Description_editcontrol}&nbsp;</td>
+    <td width=270>{$Description_editcontrol1}&nbsp;</td>
+</tr>
+{END Description_fieldblock}	
+{BEGIN UnitName_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Unit Name
+	<td align=center><input type=checkbox {$UnitName_notbox}></td>
+	<td>{$searchtype_UnitName}</td>
+	<td width=270>{$UnitName_editcontrol}&nbsp;</td>
+    <td width=270>{$UnitName_editcontrol1}&nbsp;</td>
+</tr>
+{END UnitName_fieldblock}	
+{BEGIN UnitSymbol_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Unit Symbol
+	<td align=center><input type=checkbox {$UnitSymbol_notbox}></td>
+	<td>{$searchtype_UnitSymbol}</td>
+	<td width=270>{$UnitSymbol_editcontrol}&nbsp;</td>
+    <td width=270>{$UnitSymbol_editcontrol1}&nbsp;</td>
+</tr>
+{END UnitSymbol_fieldblock}	
+{BEGIN UnitDecimal_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Unit Decimal
+	<td align=center><input type=checkbox {$UnitDecimal_notbox}></td>
+	<td>{$searchtype_UnitDecimal}</td>
+	<td width=270>{$UnitDecimal_editcontrol}&nbsp;</td>
+    <td width=270>{$UnitDecimal_editcontrol1}&nbsp;</td>
+</tr>
+{END UnitDecimal_fieldblock}	
+{BEGIN ETValue_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Inclusion
+	<td align=center><input type=checkbox {$ETValue_notbox}></td>
+	<td>{$searchtype_ETValue}</td>
+	<td width=270>{$ETValue_editcontrol}&nbsp;</td>
+    <td width=270>{$ETValue_editcontrol1}&nbsp;</td>
+</tr>
+{END ETValue_fieldblock}	
+{BEGIN IisDetail_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Iis Detail
+	<td align=center><input type=checkbox {$IisDetail_notbox}></td>
+	<td>{$searchtype_IisDetail}</td>
+	<td width=270>{$IisDetail_editcontrol}&nbsp;</td>
+    <td width=270>{$IisDetail_editcontrol1}&nbsp;</td>
+</tr>
+{END IisDetail_fieldblock}	
+</table>
+
+<div class="blackshade" id="buttons_block{$id}">
+{BEGIN search_button}
+ <span class=buttonborder><input class=button type=button value="Search" {$searchbutton_attrs}></span>
+{END search_button} 
+{BEGIN reset_button}
+ <span class=buttonborder><input class=button type=button value="Reset" {$resetbutton_attrs}></span>
+{END reset_button}
+{BEGIN back_button}
+ <span class=buttonborder><input class=button type=button value="Back to list" {$backbutton_attrs}></span>
+{END back_button}
+</div>
+</td></tr></table>
+{END contents_block}
+{$footer}
+{END body}
+</body>
+</html>

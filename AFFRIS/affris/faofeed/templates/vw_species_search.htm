@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Vw Species: Advanced search page</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->
+<STYLE>
+#center_block {margin:0 auto;}
+#contents_block {text-align:center;width:100%}
+#header_block {white-space:nowrap;height:31px;padding-top:5px;}
+#main_block {padding:10px 0;width:100%}
+#inmain_block {margin:0 10px}
+#fields_block {width:100%}
+#buttons_block {width:100%;padding:10px 0;}
+#buttons_block > * {margin:0 2px}
+</STYLE>
+<!--[if IE]>
+<STYLE>
+#main_block {padding:10px 10;}
+#inmain_block {margin:0 0px}
+</STYLE>
+<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.7600.16535"></HEAD>
+<BODY bgColor=white>{BEGIN body}{$header} 
+{BEGIN contents_block}<TABLE style="BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid" id=center_block align=center>
+  <TBODY>
+  <TR>
+    <TD id=contents_block>
+      <DIV id=header_block class=tableheader>Search&nbsp;Species</DIV>
+      {BEGIN conditions_block}<DIV id=conditions_block><SPAN 
+      class=fieldname>Search for: </SPAN><INPUT type=radio name=type 
+      {$all_checkbox}>All conditions &nbsp;&nbsp;&nbsp; <INPUT type=radio 
+      name=type {$any_checkbox}>Any condition </DIV>{END conditions_block}
+      <TABLE id=fields_block border=0 cellSpacing=0 cellPadding=4>
+        <TBODY>
+        <TR class=blackshade vAlign=middle>
+          <TD vAlign=middle align=middle mywidth="94">&nbsp;</TD>
+          <TD class=fieldname vAlign=middle width=30 align=middle mywidth="38">NOT</TD>
+          <TD vAlign=middle colSpan=3 align=middle mywidth="452">&nbsp; </TD></TR>
+        {BEGIN SpecName_fieldblock}<TR class=shade>
+          <TD class=fieldname mywidth="94">Species Name 
+          <TD align=middle mywidth="38"><INPUT type=checkbox 
+            {$SpecName_notbox}></TD>
+          <TD mywidth="69">{$searchtype_SpecName}</TD>
+          <TD width=270 mywidth="172">{$SpecName_editcontrol}</TD>
+          <TD width=270 mywidth="211"><SPAN id=second_SpecName>{$SpecName_editcontrol1} 
+            </SPAN></TD></TR>{END SpecName_fieldblock}
+        {BEGIN CommonName_fieldblock}<TR class=shade>
+          <TD class=fieldname mywidth="94">Common Name 
+          <TD align=middle mywidth="38"><INPUT type=checkbox 
+            {$CommonName_notbox}></TD>
+          <TD mywidth="69">{$searchtype_CommonName}</TD>
+          <TD width=270 mywidth="172">{$CommonName_editcontrol}</TD>
+          <TD width=270 mywidth="211"><SPAN id=second_CommonName>{$CommonName_editcontrol1} 
+            </SPAN></TD></TR>{END CommonName_fieldblock}
+        {BEGIN Group_fieldblock}<TR class=shade>
+          <TD class=fieldname mywidth="94">Group 
+          <TD align=middle mywidth="38"><INPUT type=checkbox 
+          {$Group_notbox}></TD>
+          <TD mywidth="69">{$searchtype_Group}</TD>
+          <TD width=270 mywidth="172">{$Group_editcontrol}</TD>
+          <TD width=270 mywidth="211"><SPAN id=second_Group>{$Group_editcontrol1} 
+          </SPAN></TD></TR>{END Group_fieldblock}
+        {BEGIN Environment_fieldblock}<TR class=shade>
+          <TD class=fieldname mywidth="94">Environment 
+          <TD align=middle mywidth="38"><INPUT type=checkbox 
+            {$Environment_notbox}></TD>
+          <TD mywidth="69">{$searchtype_Environment}</TD>
+          <TD width=270 mywidth="172">{$Environment_editcontrol}</TD>
+          <TD width=270 mywidth="211"><SPAN id=second_Environment>{$Environment_editcontrol1} 
+            </SPAN></TD></TR>{END Environment_fieldblock}
+        {BEGIN FeedHabit_fieldblock}<TR class=shade>
+          <TD class=fieldname mywidth="94">Feeding Habit 
+          <TD align=middle mywidth="38"><INPUT type=checkbox 
+            {$FeedHabit_notbox}></TD>
+          <TD mywidth="69">{$searchtype_FeedHabit}</TD>
+          <TD width=270 mywidth="172">{$FeedHabit_editcontrol}</TD>
+          <TD width=270 mywidth="211"><SPAN id=second_FeedHabit>{$FeedHabit_editcontrol1} 
+            </SPAN></TD></TR>{END FeedHabit_fieldblock}</TBODY></TABLE>
+      <DIV id=buttons_block class=blackshade>{BEGIN search_button}<SPAN class=buttonborder><INPUT class=button value=Search type=button {$searchbutton_attrs}></SPAN>{END search_button} 
+      {BEGIN reset_button}<SPAN class=buttonborder><INPUT class=button value=Reset type=button {$resetbutton_attrs}></SPAN>{END reset_button} 
+      {BEGIN back_button}<SPAN class=buttonborder><INPUT class=button value="List All" type=button {$backbutton_attrs}></SPAN>{END back_button} 
+      </DIV></TD></TR></TBODY></TABLE>{END contents_block}{$footer} {END body}</BODY></HTML>

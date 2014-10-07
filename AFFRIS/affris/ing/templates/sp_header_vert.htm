@@ -1,0 +1,40 @@
+<style>
+<!--
+#center_block{$id}{
+	padding: 5px;
+}
+#searchPanelHeader{$id}{
+	padding: 5px 0px 5px 5px;
+}
+-->
+</style>
+
+<!-- search panel and window header -->
+<div class="blackshade2" id="center_block{$id}">
+	##message SEARCH_FOR##:
+	{BEGIN searchPanelTopButtons}	
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="buttonborder"><input class="button" type="button" id="showSrchWin{$id}" style="width: 18px; background-image: url(images/search/showWindowPin.gif);" {$showHideSearchWin_attrs} ></span>
+		&nbsp;		
+		<span class="buttonborder"><input class="button" type="button" id="showOptPanel{$id}" style="width: 18px; background-image: url(images/search/showOptions.gif);" {$showHideSearchPanel_attrs} ></span>
+	{END searchPanelTopButtons}
+</div>
+<div id="searchform{$id}">
+	<div class="blackshade" id="searchPanelHeader{$id}">
+		{$simpleSearchFieldCombo}
+		
+		{$simpleSearchTypeCombo}
+		
+		{BEGIN searchform_text}
+			<input type=text {$searchfor_attrs} size="25">
+		{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}
+			<span class="buttonborder"><input class="button" type="button" style="width: 18px; background-image: url(images/search/search.gif);" {$searchbutton_attrs} /></span>
+		{END searchform_search}
+		&nbsp;		
+		{BEGIN searchform_showall}
+			<span id="showall{$id}" class=buttonborder {$showAllCont_attrs}><input type=button class="button" value="##message SHOW_ALL##" {$showallbutton_attrs}></span>
+		{END searchform_showall}
+	</div>
+</div> 

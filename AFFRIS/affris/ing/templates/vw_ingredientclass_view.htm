@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Feed ingredient details</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->{BEGIN style_block}
+<STYLE>
+#height100{$id} {padding:10px;} 
+#center_block{$id} {width:55%;margin:0 auto;min-width: 500px;}
+#contents_block{$id} {text-align:center;}
+#header_block{$id} {white-space:nowrap;height:31px;padding:5px;}
+#fields_block{$id} {width:100%}
+#fields_block{$id} td{padding-left:10px;}
+#buttons_block{$id} {padding:5px;white-space:nowrap;text-align:center;}
+#required_block{$id} {text-align:left;padding:5px}
+#span {margin:0 20px 0 20px;}
+a.pdf{float:left;}
+</STYLE>
+{END style_block}
+<META name=GENERATOR content="MSHTML 9.00.8112.16430"></HEAD>
+<BODY>{BEGIN body}{$header} 
+<DIV id="height100{$id}" align=center>{BEGIN flybody}
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=400>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id="header_block{$id}">
+      <H1>Feed ingredient details: {$IName_value}&nbsp; </H1></DIV>
+      <DIV align=left>
+      <HR SIZE=1 width="100%" noShade>
+      </DIV>{BEGIN back_button}&nbsp;&nbsp;&nbsp;<A 
+      href="vw_ingredientclass_list.php?a=return" {$backbutton_attrs}>Back to 
+      list</A><BR><BR>{END back_button}
+      <TABLE id="fields_block{$id}" border=0 cellSpacing=2 cellPadding=4>
+        <TBODY>
+        {BEGIN IName_fieldblock}<TR>
+          <TD style="WIDTH: 138px" class="es shade" width=150><B>Ingredient 
+            name</B> </TD>
+          <TD style="WIDTH: 228px" width=250>{$IName_value}&nbsp; </TD></TR>{END IName_fieldblock}
+        {BEGIN IfeedNo_fieldblock}<TR height=35>
+          <TD style="WIDTH: 138px" class="es shade" width=150><B>International 
+            feed number</B></TD>
+          <TD style="WIDTH: 228px" width=250>{$IfeedNo_value}&nbsp; </TD></TR>{END IfeedNo_fieldblock}
+        {BEGIN Description1_fieldblock}<TR>
+          <TD style="WIDTH: 138px" class="es shade" width=150><B>Ingredient 
+            type</B> </TD>
+          <TD style="WIDTH: 228px" width=250>{$Description1_value}&nbsp; </TD></TR>{END Description1_fieldblock}
+        {BEGIN Description2_fieldblock}<TR>
+          <TD style="WIDTH: 138px" class="es shade" width=150><B>Major 
+            ingredient classification</B> </TD>
+          <TD style="WIDTH: 228px" width=250>{$Description2_value}&nbsp; </TD></TR>{END Description2_fieldblock}
+        {BEGIN Description3_fieldblock}<TR>
+          <TD style="WIDTH: 138px" class="es shade" 
+            width=150><B>Sub-classification</B> </TD>
+          <TD style="WIDTH: 228px" width=250>{$Description3_value}&nbsp; </TD></TR>{END Description3_fieldblock}
+        {BEGIN DataSource_fieldblock}<TR>
+          <TD style="WIDTH: 138px" class="es shade" width=150><B>Data 
+            Source</B> </TD>
+          <TD style="WIDTH: 228px" width=250>{$DataSource_value}&nbsp; </TD></TR>{END DataSource_fieldblock}
+        {BEGIN ICountry_fieldblock}<TR>
+          <TD style="WIDTH: 138px" class="es shade" width=150><B>Ingredient 
+            country</B> </TD>
+          <TD style="WIDTH: 228px" width=250>{$ICountry_value}&nbsp; </TD></TR>{END ICountry_fieldblock}
+        {BEGIN Species_fieldblock}<TR>
+          <TD style="WIDTH: 138px" class="es shade" width=150><B>Scientific 
+            name</B> </TD>
+          <TD style="WIDTH: 228px" width=250>{$Species_value}&nbsp; </TD></TR>{END Species_fieldblock}
+        {BEGIN IngredientClass_fieldblock}<TR>
+          <TD style="WIDTH: 138px" class="es shade" width=150><B>Ingredient 
+            Class</B> </TD>
+          <TD style="WIDTH: 228px" width=250>{$IngredientClass_value}&nbsp; 
+        </TD></TR>{END IngredientClass_fieldblock}</TBODY></TABLE>{BEGIN back_button}<BR>&nbsp;&nbsp;&nbsp;<A 
+      href="vw_ingredientclass_list.php?a=return" {$backlink_attrs}>Back to 
+      list</A> {END back_button}
+      <DIV align=left>
+      <HR SIZE=1 width="100%" noShade>
+      </DIV><SPAN id=span>&nbsp;</SPAN> {BEGIN prev_button}<INPUT class=button value=" <<< " type=reset {$prevbutton_attrs}>{END prev_button} 
+{BEGIN next_button}<INPUT class=button value=" >>> " type=reset {$nextbutton_attrs}>{END next_button} 
+      <BR><BR></TD></TR></TBODY></TABLE>{END flybody}</DIV>{BEGIN detail_tables}{$displayDetailTable_vw_fullingredientproxanalysis}{$displayDetailTable_vw_fullingredientelementanalysis}&nbsp; 
+{$displayDetailTable_vw_ingredientspecassociation} {END detail_tables}<BR><BR>{$footer} {END body}</BODY></HTML>

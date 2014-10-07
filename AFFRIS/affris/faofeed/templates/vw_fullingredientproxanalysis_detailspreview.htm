@@ -1,0 +1,32 @@
+<iframe id="iframe" 
+		style="position:absolute;
+               border:none;
+			   left:-1px; 
+			   top:-1px; 
+			   filter:alpha(opacity=0);
+			   z-index:-1;"> 
+</iframe>
+Vw Fullingredientproxanalysis<br>
+Details found: <strong>{$row_count}.</strong>
+{BEGIN display_first}
+<span>Displaying first: <strong>{$display_count}</strong>.</span>
+{END display_first}
+
+{BEGIN details_data}
+<table cellpadding=1 cellspacing=1 border=0  class="detailtable">
+<tr>
+<td><strong>Description</strong></td>
+<td><strong>Unit Decimal</strong></td>
+<td><strong>Inclusion</strong></td>
+<td><strong>Unit Symbol</strong></td>
+</tr>
+{BEGIN details_row}
+<tr>
+<td>{$Description_value}</td>
+<td>{$UnitDecimal_value}</td>
+<td>{$ETValue_value}</td>
+<td>{$UnitSymbol_value}</td>
+</tr>
+{END details_row}
+</table>
+{END details_data}

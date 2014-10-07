@@ -1,0 +1,213 @@
+<html {$html_attrs}>
+<head><title>Feed ingredient details</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+{BEGIN style_block}
+<style>
+#center_block{$id} {width:500px;margin:0 auto;}
+#contents_block{$id} {text-align:center;}
+#header_block{$id} {white-space:nowrap;height:31px;padding:5px 0;}
+#fields_block{$id} {width:100%}
+#buttons_block{$id} {padding-bottom:5px;white-space:nowrap;text-align:center;}
+#required_block{$id} {text-align:left;padding:5px}
+</style>
+{END style_block}
+</head>
+<body {$bodyattrs}>
+{BEGIN body}
+{$header}
+{BEGIN flybody}
+<TABLE align="center" id="center_block{$id}" cellpadding=0 cellspacing=0><tr><td id="header_block{$id}">
+<div id="header_block{$id}">
+<h1>Feed ingredient details, Add new record</h1>
+</div>
+
+{BEGIN message_block}
+<div id="message_block{$id}" class="downedit">{$message}</div>
+{END message_block}
+
+<div align=left><hr width="100%" noshade size=1></div>
+
+&nbsp;&nbsp;&nbsp;<a href="vw_ingredientclass_list.php?a=return" {$backbutton_attrs}>Back to list</a><br><br>
+
+<table cellpadding=4 cellspacing=2 border=0 id="fields_block{$id}">
+{BEGIN IisDetail_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IisDetail_label}Iis Detail{END IisDetail_label}
+		</td>
+		<td width="250">
+			{$IisDetail_editcontrol}
+		</td>
+	</tr>
+{END IisDetail_fieldblock}
+{BEGIN IngredientID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IngredientID_label}Ingredient ID{END IngredientID_label}
+		</td>
+		<td width="250">
+			{$IngredientID_editcontrol}
+		</td>
+	</tr>
+{END IngredientID_fieldblock}
+{BEGIN IName_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IName_label}Ingredient name{END IName_label}
+		</td>
+		<td width="250">
+			{$IName_editcontrol}
+		</td>
+	</tr>
+{END IName_fieldblock}
+{BEGIN IfeedNo_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IfeedNo_label}International feed no.{END IfeedNo_label}
+		</td>
+		<td width="250">
+			{$IfeedNo_editcontrol}
+		</td>
+	</tr>
+{END IfeedNo_fieldblock}
+{BEGIN Description1_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Description1_label}Ingredient type{END Description1_label}
+		</td>
+		<td width="250">
+			{$Description1_editcontrol}
+		</td>
+	</tr>
+{END Description1_fieldblock}
+{BEGIN Description2_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Description2_label}Major ingredient classification{END Description2_label}
+		</td>
+		<td width="250">
+			{$Description2_editcontrol}
+		</td>
+	</tr>
+{END Description2_fieldblock}
+{BEGIN Description3_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Description3_label}Sub-classification{END Description3_label}
+		</td>
+		<td width="250">
+			{$Description3_editcontrol}
+		</td>
+	</tr>
+{END Description3_fieldblock}
+{BEGIN IDSourceID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IDSourceID_label}IDSource ID{END IDSourceID_label}
+		</td>
+		<td width="250">
+			{$IDSourceID_editcontrol}
+		</td>
+	</tr>
+{END IDSourceID_fieldblock}
+{BEGIN DataSource_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN DataSource_label}Data Source{END DataSource_label}
+		</td>
+		<td width="250">
+			{$DataSource_editcontrol}
+		</td>
+	</tr>
+{END DataSource_fieldblock}
+{BEGIN CountryID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN CountryID_label}Country ID{END CountryID_label}
+		</td>
+		<td width="250">
+			{$CountryID_editcontrol}
+		</td>
+	</tr>
+{END CountryID_fieldblock}
+{BEGIN ICountry_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN ICountry_label}Ingredient country{END ICountry_label}
+		</td>
+		<td width="250">
+			{$ICountry_editcontrol}
+		</td>
+	</tr>
+{END ICountry_fieldblock}
+{BEGIN IngredientSpecID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IngredientSpecID_label}Ingredient Spec ID{END IngredientSpecID_label}
+		</td>
+		<td width="250">
+			{$IngredientSpecID_editcontrol}
+		</td>
+	</tr>
+{END IngredientSpecID_fieldblock}
+{BEGIN Species_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Species_label}Scientific name{END Species_label}
+		</td>
+		<td width="250">
+			{$Species_editcontrol}
+		</td>
+	</tr>
+{END Species_fieldblock}
+{BEGIN IngredientClassID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IngredientClassID_label}Ingredient Class ID{END IngredientClassID_label}
+		</td>
+		<td width="250">
+			{$IngredientClassID_editcontrol}
+		</td>
+	</tr>
+{END IngredientClassID_fieldblock}
+{BEGIN IngredientClass_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IngredientClass_label}Ingredient Class{END IngredientClass_label}
+		</td>
+		<td width="250">
+			{$IngredientClass_editcontrol}
+		</td>
+	</tr>
+{END IngredientClass_fieldblock}
+</table>
+
+<div id="buttons_block{$id}">
+	<br>&nbsp;&nbsp;&nbsp;<a href="vw_ingredientclass_list.php?a=return" {$backbutton_attrs}>Back to list</a>
+	<div align=left><hr width="100%" noshade size=1></div>
+	{BEGIN legend}
+	<div id="required_block{$id}" ><img alt="bullet" src="images/icon_required.gif"> - Required field</div>
+	{END legend}
+	{$legendBreak}
+	{BEGIN save_button}
+	<input class=button type=submit value="Save" name=submit1 {$savebutton_attrs}>
+	{END save_button}
+	{BEGIN cancel_button}
+	<input class=button type=button value="Cancel" {$cancelbutton_attrs}>
+	{END cancel_button}
+</div>
+</td></tr>
+</table>
+{END flybody}
+
+{BEGIN detail_tables}
+{END detail_tables}
+<br><br>
+{$footer}
+{END body}
+</body>
+</html>
+

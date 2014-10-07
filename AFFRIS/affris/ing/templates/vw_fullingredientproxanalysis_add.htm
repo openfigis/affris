@@ -1,0 +1,143 @@
+<html {$html_attrs}>
+<head><title>Proximate analysis of feed ingredient</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+{BEGIN style_block}
+<style>
+#center_block{$id} {width:500px;margin:0 auto;}
+#contents_block{$id} {text-align:center;}
+#header_block{$id} {white-space:nowrap;height:31px;padding:5px 0;}
+#fields_block{$id} {width:100%}
+#buttons_block{$id} {padding-bottom:5px;white-space:nowrap;text-align:center;}
+#required_block{$id} {text-align:left;padding:5px}
+</style>
+{END style_block}
+</head>
+<body {$bodyattrs}>
+{BEGIN body}
+{$header}
+{BEGIN flybody}
+<TABLE align="center" id="center_block{$id}" cellpadding=0 cellspacing=0><tr><td id="header_block{$id}">
+<div id="header_block{$id}">
+<h1>Proximate analysis of feed ingredient, Add new record</h1>
+</div>
+
+{BEGIN message_block}
+<div id="message_block{$id}" class="downedit">{$message}</div>
+{END message_block}
+
+<div align=left><hr width="100%" noshade size=1></div>
+
+&nbsp;&nbsp;&nbsp;<a href="vw_fullingredientproxanalysis_list.php?a=return" {$backbutton_attrs}>Back to list</a><br><br>
+
+<table cellpadding=4 cellspacing=2 border=0 id="fields_block{$id}">
+{BEGIN IngredientID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IngredientID_label}Ingredient ID{END IngredientID_label}
+		</td>
+		<td width="250">
+			{$IngredientID_editcontrol}
+		</td>
+	</tr>
+{END IngredientID_fieldblock}
+{BEGIN ElementTypeID_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN ElementTypeID_label}Element Type ID{END ElementTypeID_label}
+		</td>
+		<td width="250">
+			{$ElementTypeID_editcontrol}
+		</td>
+	</tr>
+{END ElementTypeID_fieldblock}
+{BEGIN Description_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN Description_label}Description{END Description_label}
+		</td>
+		<td width="250">
+			{$Description_editcontrol}
+		</td>
+	</tr>
+{END Description_fieldblock}
+{BEGIN UnitName_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN UnitName_label}Unit Name{END UnitName_label}
+		</td>
+		<td width="250">
+			{$UnitName_editcontrol}
+		</td>
+	</tr>
+{END UnitName_fieldblock}
+{BEGIN UnitSymbol_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN UnitSymbol_label}Unit Symbol{END UnitSymbol_label}
+		</td>
+		<td width="250">
+			{$UnitSymbol_editcontrol}
+		</td>
+	</tr>
+{END UnitSymbol_fieldblock}
+{BEGIN UnitDecimal_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN UnitDecimal_label}Unit Decimal{END UnitDecimal_label}
+		</td>
+		<td width="250">
+			{$UnitDecimal_editcontrol}
+		</td>
+	</tr>
+{END UnitDecimal_fieldblock}
+{BEGIN ETValue_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN ETValue_label}Inclusion{END ETValue_label}
+		</td>
+		<td width="250">
+			{$ETValue_editcontrol}
+		</td>
+	</tr>
+{END ETValue_fieldblock}
+{BEGIN IisDetail_fieldblock}
+	<tr>
+		<td class="shade" width="150">
+			{BEGIN IisDetail_label}Iis Detail{END IisDetail_label}
+		</td>
+		<td width="250">
+			{$IisDetail_editcontrol}
+		</td>
+	</tr>
+{END IisDetail_fieldblock}
+</table>
+
+<div id="buttons_block{$id}">
+	<br>&nbsp;&nbsp;&nbsp;<a href="vw_fullingredientproxanalysis_list.php?a=return" {$backbutton_attrs}>Back to list</a>
+	<div align=left><hr width="100%" noshade size=1></div>
+	{BEGIN legend}
+	<div id="required_block{$id}" ><img alt="bullet" src="images/icon_required.gif"> - Required field</div>
+	{END legend}
+	{$legendBreak}
+	{BEGIN save_button}
+	<input class=button type=submit value="Save" name=submit1 {$savebutton_attrs}>
+	{END save_button}
+	{BEGIN cancel_button}
+	<input class=button type=button value="Cancel" {$cancelbutton_attrs}>
+	{END cancel_button}
+</div>
+</td></tr>
+</table>
+{END flybody}
+
+{BEGIN detail_tables}
+{END detail_tables}
+<br><br>
+{$footer}
+{END body}
+</body>
+</html>
+

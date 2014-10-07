@@ -1,0 +1,193 @@
+<html {$html_attrs}>
+<head>
+<title>Vw Fullfeedelementanalysis</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+<style>
+.grid_block {  
+margin-top:5px;
+border-collapse: collapse;
+align:center;
+width:95%;
+border:none;
+} 
+.grid_block td { 
+ padding: 5px; 
+ margin: 0px; 
+ border: solid black 1px;
+}
+.grid_block .gridspacing {width:20px;border-top-color:white; border-bottom-color:white;background-color:white}
+@media print 
+{
+	a.pdf {display:none}
+}
+.printpage {page-break-after:always}
+#selpage{margin-left:30px;}
+</style> 
+</head>
+<body style="background-color:white">
+{BEGIN body}
+{$header}
+{BEGIN page}
+{BEGIN mastertable_block}
+<div id="mastertable_block">
+{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<h1>Vw Fullfeedelementanalysis</h1>
+{BEGIN page_number}
+<div id='selpage'>Page {$pageno} of {$maxpages} </div>
+{END page_number}
+
+{BEGIN grid_block}
+
+<table align="center" cellpadding=5 class="grid_block">
+{BEGIN grid_header}
+<tr>
+{BEGIN record_header}
+{BEGIN FeedID_fieldheadercolumn}
+	<td>
+{BEGIN FeedID_fieldheader}
+	<b>Feed ID</b>
+{END FeedID_fieldheader}
+	</td>
+{END FeedID_fieldheadercolumn}
+{BEGIN ElementID_fieldheadercolumn}
+	<td>
+{BEGIN ElementID_fieldheader}
+	<b>Element ID</b>
+{END ElementID_fieldheader}
+	</td>
+{END ElementID_fieldheadercolumn}
+{BEGIN EName_fieldheadercolumn}
+	<td>
+{BEGIN EName_fieldheader}
+	<b>EName</b>
+{END EName_fieldheader}
+	</td>
+{END EName_fieldheadercolumn}
+{BEGIN CommonName_fieldheadercolumn}
+	<td>
+{BEGIN CommonName_fieldheader}
+	<b>Common Name</b>
+{END CommonName_fieldheader}
+	</td>
+{END CommonName_fieldheadercolumn}
+{BEGIN TagName_fieldheadercolumn}
+	<td>
+{BEGIN TagName_fieldheader}
+	<b>Tag Name</b>
+{END TagName_fieldheader}
+	</td>
+{END TagName_fieldheadercolumn}
+{BEGIN UnitID_fieldheadercolumn}
+	<td>
+{BEGIN UnitID_fieldheader}
+	<b>Unit ID</b>
+{END UnitID_fieldheader}
+	</td>
+{END UnitID_fieldheadercolumn}
+{BEGIN UnitName_fieldheadercolumn}
+	<td>
+{BEGIN UnitName_fieldheader}
+	<b>Unit Name</b>
+{END UnitName_fieldheader}
+	</td>
+{END UnitName_fieldheadercolumn}
+{BEGIN UnitSymbol_fieldheadercolumn}
+	<td>
+{BEGIN UnitSymbol_fieldheader}
+	<b>Unit Symbol</b>
+{END UnitSymbol_fieldheader}
+	</td>
+{END UnitSymbol_fieldheadercolumn}
+{BEGIN UnitDecimal_fieldheadercolumn}
+	<td>
+{BEGIN UnitDecimal_fieldheader}
+	<b>Unit Decimal</b>
+{END UnitDecimal_fieldheader}
+	</td>
+{END UnitDecimal_fieldheadercolumn}
+{BEGIN iValue_fieldheadercolumn}
+	<td>
+{BEGIN iValue_fieldheader}
+	<b>I Value</b>
+{END iValue_fieldheader}
+	</td>
+{END iValue_fieldheadercolumn}
+{BEGIN endrecordheader_block}
+	<td class="gridspacing">&nbsp;</td>
+{END endrecordheader_block}
+{END record_header}
+</tr>
+{END grid_header}
+{BEGIN grid_row}
+<tr valign=top {$rowstyle} {$rowattrs}>
+{BEGIN grid_record}
+{BEGIN FeedID_fieldcolumn}
+<td {$FeedID_style}>
+{$FeedID_value}
+</td>
+{END FeedID_fieldcolumn}
+{BEGIN ElementID_fieldcolumn}
+<td {$ElementID_style}>
+{$ElementID_value}
+</td>
+{END ElementID_fieldcolumn}
+{BEGIN EName_fieldcolumn}
+<td {$EName_style}>
+{$EName_value}
+</td>
+{END EName_fieldcolumn}
+{BEGIN CommonName_fieldcolumn}
+<td {$CommonName_style}>
+{$CommonName_value}
+</td>
+{END CommonName_fieldcolumn}
+{BEGIN TagName_fieldcolumn}
+<td {$TagName_style}>
+{$TagName_value}
+</td>
+{END TagName_fieldcolumn}
+{BEGIN UnitID_fieldcolumn}
+<td {$UnitID_style}>
+{$UnitID_value}
+</td>
+{END UnitID_fieldcolumn}
+{BEGIN UnitName_fieldcolumn}
+<td {$UnitName_style}>
+{$UnitName_value}
+</td>
+{END UnitName_fieldcolumn}
+{BEGIN UnitSymbol_fieldcolumn}
+<td {$UnitSymbol_style}>
+{$UnitSymbol_value}
+</td>
+{END UnitSymbol_fieldcolumn}
+{BEGIN UnitDecimal_fieldcolumn}
+<td {$UnitDecimal_style}>
+{$UnitDecimal_value}
+</td>
+{END UnitDecimal_fieldcolumn}
+{BEGIN iValue_fieldcolumn}
+<td {$iValue_style}>
+{$iValue_value}
+</td>
+{END iValue_fieldcolumn}
+{BEGIN endrecord_block}
+<td class="gridspacing">&nbsp;</td>
+{END endrecord_block}
+{END grid_record}
+</tr>
+{END grid_row}
+<!-- totals row -->
+</table>
+{END grid_block}
+{END page}
+{$footer}
+{END body}
+</body>
+</html>

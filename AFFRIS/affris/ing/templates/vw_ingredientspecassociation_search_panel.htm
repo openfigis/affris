@@ -1,0 +1,191 @@
+{BEGIN searchPanel}
+<style>
+<!--
+
+.searchOptions div{
+	/*margin: 10px 0px 10px 10px;*/
+	padding: 10px 0px 10px 10px;
+}
+
+
+
+#addOption{$id}{
+	/*padding: 1px 5px 13px 5px !important;*/
+}
+
+.addOptionLink{
+	margin: 1px 5px 13px 5px !important;
+}
+
+#bottomSearchButt{$id}{
+	padding: 13px 1px 5px 1px !important;
+}
+#controlChooseMenu{$id}{
+	position: absolute;			
+	display: none;	
+	width: auto;
+	text-align: left;
+	
+}	
+
+#controlsBlock_{$id}{
+	/*display:table;*/
+	width: 180px;
+}
+
+.srchPanelTable, .srchPanelRow{
+	padding:0px !important;
+}
+
+.srchPanelRow{
+	overflow: hidden;
+	width: 180px;
+	margin: 0px !important;
+}
+
+.srchPanelCell{
+	/*padding: 2px !important;*/
+	/*margin: 2px 0px 2px 2px !important;*/
+	padding: 2px 0px 2px 2px !important;
+	float: left; !important;	
+}
+
+.srchPanelCell2{
+	/*width: 100%;*/
+	width: 170px; 
+	/*margin-left: 17px !important;*/
+	padding-left: 17px !important;
+}
+.winTable{	
+	/*border-collapse: collapse;*/
+	border-collapse: separate;	
+}
+
+.delButt{
+	visibility: hidden;
+}
+
+
+
+.addSearchControl{
+	margin: 5px;
+}
+
+.critCont{
+	margin: 10px 0px 0px 0px; 
+}
+-->
+</style>
+
+
+
+<div id="searchOptions{$id}" class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div id="srchCritTop{$id}" class="critCont" style="display: none;">
+		Criteria:&nbsp;
+    	<input type="radio" name="srchType" {$all_checkbox}>{BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" {$any_checkbox}>{BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	<div id="addOption{$id}" class="addOption">
+      	<a id="showHideControlChooseMenu{$id}"  class="tablelinkssearch" {$showHideCtrls_attrs}>Add field</a>&nbsp;&nbsp;&nbsp;
+		<a id="showHideSearchType{$id}"  class="tablelinkssearch" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>		
+	</div>
+	<!-- choose controls div -->
+	<div id="controlChooseMenu{$id}" class="controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_IName}
+			<a id="addSearchControl_IName" class="addSearchControl" {$addSearchControl_IName_attrs}>IName</a>
+		{END addSearch_IName}
+		{BEGIN addSearch_IfeedNo}
+			<a id="addSearchControl_IfeedNo" class="addSearchControl" {$addSearchControl_IfeedNo_attrs}>Ifeed No</a>
+		{END addSearch_IfeedNo}
+		{BEGIN addSearch_Description1}
+			<a id="addSearchControl_Description1" class="addSearchControl" {$addSearchControl_Description1_attrs}>Description1</a>
+		{END addSearch_Description1}
+		{BEGIN addSearch_Description2}
+			<a id="addSearchControl_Description2" class="addSearchControl" {$addSearchControl_Description2_attrs}>Description2</a>
+		{END addSearch_Description2}
+		{BEGIN addSearch_Description3}
+			<a id="addSearchControl_Description3" class="addSearchControl" {$addSearchControl_Description3_attrs}>Description3</a>
+		{END addSearch_Description3}
+		{BEGIN addSearch_IDSourceID}
+			<a id="addSearchControl_IDSourceID" class="addSearchControl" {$addSearchControl_IDSourceID_attrs}>IDSource ID</a>
+		{END addSearch_IDSourceID}
+		{BEGIN addSearch_DataSource}
+			<a id="addSearchControl_DataSource" class="addSearchControl" {$addSearchControl_DataSource_attrs}>Data Source</a>
+		{END addSearch_DataSource}
+		{BEGIN addSearch_ICountry}
+			<a id="addSearchControl_ICountry" class="addSearchControl" {$addSearchControl_ICountry_attrs}>ICountry</a>
+		{END addSearch_ICountry}
+		{BEGIN addSearch_Species}
+			<a id="addSearchControl_Species" class="addSearchControl" {$addSearchControl_Species_attrs}>Species</a>
+		{END addSearch_Species}
+		{BEGIN addSearch_SpecName}
+			<a id="addSearchControl_SpecName" class="addSearchControl" {$addSearchControl_SpecName_attrs}>Spec Name</a>
+		{END addSearch_SpecName}
+		{BEGIN addSearch_CommonName}
+			<a id="addSearchControl_CommonName" class="addSearchControl" {$addSearchControl_CommonName_attrs}>Common Name</a>
+		{END addSearch_CommonName}
+		{BEGIN addSearch_Hybrid}
+			<a id="addSearchControl_Hybrid" class="addSearchControl" {$addSearchControl_Hybrid_attrs}>Hybrid</a>
+		{END addSearch_Hybrid}
+		{BEGIN addSearch_Variety}
+			<a id="addSearchControl_Variety" class="addSearchControl" {$addSearchControl_Variety_attrs}>Variety</a>
+		{END addSearch_Variety}
+		{BEGIN addSearch_Family}
+			<a id="addSearchControl_Family" class="addSearchControl" {$addSearchControl_Family_attrs}>Family</a>
+		{END addSearch_Family}
+		{BEGIN addSearch_Group}
+			<a id="addSearchControl_Group" class="addSearchControl" {$addSearchControl_Group_attrs}>Group</a>
+		{END addSearch_Group}
+		{BEGIN addSearch_Genus}
+			<a id="addSearchControl_Genus" class="addSearchControl" {$addSearchControl_Genus_attrs}>Genus</a>
+		{END addSearch_Genus}
+		{BEGIN addSearch_Environment}
+			<a id="addSearchControl_Environment" class="addSearchControl" {$addSearchControl_Environment_attrs}>Environment</a>
+		{END addSearch_Environment}
+		{BEGIN addSearch_FeedHabit}
+			<a id="addSearchControl_FeedHabit" class="addSearchControl" {$addSearchControl_FeedHabit_attrs}>Feed Habit</a>
+		{END addSearch_FeedHabit}
+		{BEGIN addSearch_Country}
+			<a id="addSearchControl_Country" class="addSearchControl" {$addSearchControl_Country_attrs}>Country</a>
+		{END addSearch_Country}
+		{BEGIN addSearch_SpecYear}
+			<a id="addSearchControl_SpecYear" class="addSearchControl" {$addSearchControl_SpecYear_attrs}>Spec Year</a>
+		{END addSearch_SpecYear}
+		{BEGIN addSearch_lower}
+			<a id="addSearchControl_lower" class="addSearchControl" {$addSearchControl_lower_attrs}>Lower</a>
+		{END addSearch_lower}
+		{BEGIN addSearch_upper}
+			<a id="addSearchControl_upper" class="addSearchControl" {$addSearchControl_upper_attrs}>Upper</a>
+		{END addSearch_upper}
+	</div>
+	<!-- search window controls block, make it visible in window mode and hidden in panel -->
+	<table id="controlsBlock_{$id}_win" class="winTable" style="display: none;" CELLPADDING="3">
+	{BEGIN searchCtrlBlock_win}			
+		<tr class="winRow" {$filterRow_attrs}>	
+			<td class="srchWinCell"></td>		
+			<td class="srchWinCell"></td>
+			<td class="srchWinCell" {$srchTypeCont_attrs_win}></td>
+			<td class="srchWinCell"></td>
+			<td class="srchWinCell"></td>			
+		</tr>
+	{END searchCtrlBlock_win}
+	</table>
+	<!-- add for each for get predefined fields for list search panel, not adv search, visible in panel mode and hidden in window -->	
+	<div id="controlsBlock_{$id}" class="srchPanelTable">		
+	{BEGIN searchCtrlBlock}			
+		<div class="srchPanelRow blockBorder" {$filterDiv_attrs}>	
+			<div class="srchPanelCell">{$delCtrlButt}</div>		
+			<div class="srchPanelCell">{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2" {$srchTypeCont_attrs}>{$searchtype}</div>
+			<div class="srchPanelCell srchPanelCell2" >{$searchcontrol}</div>
+			<div class="srchPanelCell srchPanelCell2" {$secCtrlCont_attrs}>{$searchcontrol1}</div>			
+		</div>
+	{END searchCtrlBlock}
+	</div>
+	<div id="bottomSearchButt{$id}" align="center" {$bottomSearchButt_attrs}>
+		<span class=buttonborder><input type=button class="button" value="Search" {$searchbutton_attrs}></span> 
+	</div>
+</div>
+{END searchPanel}

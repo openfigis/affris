@@ -1,0 +1,77 @@
+{BEGIN mainmenu_block}
+{BEGIN mainmenustyle_block}
+<style class="Vmenu">
+#mainmenu_block IMG, #mainmenu_block HR
+{
+	vertical-align:middle;
+		{BEGIN RTL_block}
+	margin-left:10px;
+	{END RTL_block}
+	{BEGIN LTR_block}
+	margin-right:10px;
+	{END LTR_block}
+}
+#mainmenu_block img.spacer
+{
+	{BEGIN RTL_block}
+	margin-left:0px;
+	{END RTL_block}
+	{BEGIN LTR_block}
+	margin-right:0px;
+	{END LTR_block}
+}
+#menu_block{$id}, #tables_block{{BEGIN RTL_block}text-align:right;{END RTL_block}} 
+/* For Vmenu1 on the list page */
+#mainmenu_block {width:200px;}
+#menu_block{$id}, #tables_block{padding:10px 0;} 
+{BEGIN RTL_block}
+.Vmenu1 {text-align:right;}
+{END RTL_block}
+.Vmenu1 ul, .Vmenu1 ul li{list-style:none;margin:0;padding:0px;}
+.Vmenu1 ul li {padding:5px 10px;z-index:1;display:block;width:auto;}
+.Vmenu1 ul li ul{display:none;position:absolute;top:0px;z-index:2;}
+.Vmenu1 ul li ul li{white-space:nowrap;}
+</style>
+{END mainmenustyle_block}
+<div id="mainmenu_block" class="Vmenu1">
+
+<ul>
+	{BEGIN item1_menulink}
+	<li id="li1" view="topitem" >
+	
+<a {$item1_menulink_attrs}  ><img class="spacer" alt="*" src="images/spacer.gif" border=0>{$item1_title}</a>
+
+
+
+	</li>
+	{END item1_menulink}
+	{BEGIN item2_menulink}
+	<li id="li2" view="topitem" >
+	
+<a {$item2_menulink_attrs}  ><img class="spacer" alt="*" src="images/spacer.gif" border=0>{$item2_title}</a>
+
+
+
+	</li>
+	{END item2_menulink}
+	{BEGIN item3_menulink}
+	<li id="li3" view="topitem" >
+	
+<a {$item3_menulink_attrs}  ><img class="spacer" alt="*" src="images/spacer.gif" border=0>{$item3_title}</a>
+
+
+
+	</li>
+	{END item3_menulink}
+	{BEGIN item4_menulink}
+	<li id="li4" view="topitem" >
+	
+<a {$item4_menulink_attrs}  ><img class="spacer" alt="*" src="images/spacer.gif" border=0>{$item4_title}</a>
+
+
+
+	</li>
+	{END item4_menulink}
+</ul>
+</div>
+{END mainmenu_block}

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Vw Feedingredient</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->
+<STYLE>
+#center_block {width:500px;margin:0 auto;}
+#contents_block {text-align:center;width:100%}
+#header_block {width:100%;white-space:nowrap;height:31px;padding-top:5px;}
+#fields_block {width:100%}
+#fields_block td {padding-left:10px}
+#buttons_block {width:100%;padding-bottom:5px;text-align:center}
+#required_block {text-align:left;padding:5px}
+#message_block {padding:5px 0px;text-align:center}
+#span {margin:0 20px 0 20px;}
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16535"></HEAD>
+<BODY>{BEGIN body}{$header} 
+<TABLE id=center_block><TR><TD><DIV id=header_block><H1>Ingredients for Specified feed, Edit record [&nbsp;{$FName_editcontrol} 
+      ] </H1></DIV>
+      {BEGIN message_block}<DIV id=message_block>{$message} </DIV>{END message_block}
+      <DIV align=left><HR SIZE=1 width=300 noShade>
+      </DIV>&nbsp;&nbsp;&nbsp;<A href="vw_feedingredient_list.php?a=return">Back 
+      to list</A><BR><BR>
+      <TABLE id=fields_block border=0 cellSpacing=2 cellPadding=4>{BEGIN FName_fieldblock}<TR><TD class=shade width=150>Feed Name</TD>
+          <TD width=250>{$FName_editcontrol} </TD></TR>{END FName_fieldblock}
+        {BEGIN FisDetail_fieldblock}<TR><TD class=shade width=150>Fis Detail</TD>
+          <TD width=250>{$FisDetail_editcontrol} </TD></TR>{END FisDetail_fieldblock}
+  {BEGIN IisDetail_fieldblock}<TR><TD class=shade width=150>Iis Detail</TD>
+          <TD width=250>{$IisDetail_editcontrol} </TD></TR>{END IisDetail_fieldblock}
+        {BEGIN FeedID_fieldblock}<TR><TD class=shade width=150>Feed ID</TD>
+          <TD width=250>{$FeedID_editcontrol} </TD></TR>{END FeedID_fieldblock}
+  {BEGIN IngredientID_fieldblock}<TR><TD class=shade width=150>Ingredient ID</TD>
+          <TD width=250>{$IngredientID_editcontrol} </TD></TR>{END IngredientID_fieldblock}
+        {BEGIN IName_fieldblock}<TR><TD class=shade width=150>Ingredient Name</TD>
+          <TD width=250>{$IName_editcontrol} </TD></TR>{END IName_fieldblock}
+        {BEGIN FValue_fieldblock}<TR><TD class=shade width=150>Feed Value</TD>
+          <TD width=250>{$FValue_editcontrol} &nbsp;<IMG 
+            src="images/icon_required.gif"> </TD></TR>{END FValue_fieldblock}</TABLE>
+      <DIV id=buttons_block><DIV align=left><HR SIZE=1 width=300 noShade>
+      </DIV>
+      <DIV id=required_block><IMG src="images/icon_required.gif"> - Required 
+      field</DIV>{BEGIN save_button}<INPUT class=button value=Save type=submit>{END save_button} 
+{BEGIN reset_button}<INPUT class=button value=Reset type=reset {$resetbutton_attrs}>{END reset_button} 
+      <SPAN id=span>&nbsp;</SPAN> {BEGIN prev_button}<INPUT id=prev class=button value=" <<< " type=reset {$prevbutton_attrs}>{END prev_button} 
+{BEGIN next_button}<INPUT id=next class=button value=" >>> " type=reset {$nextbutton_attrs}>{END next_button} 
+      </DIV></TD></TR></TABLE>{$footer} {END body}</BODY></HTML>

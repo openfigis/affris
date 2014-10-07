@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Vw Ingredient: Advanced search page</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->
+<STYLE>
+#center_block {margin:0 auto;}
+#contents_block {text-align:center;width:100%}
+#header_block {white-space:nowrap;height:31px;padding-top:5px;}
+#main_block {padding:10px 0;width:100%}
+#inmain_block {margin:0 10px}
+#fields_block {width:100%}
+#buttons_block {width:100%;padding:10px 0;}
+#buttons_block > * {margin:0 2px}
+</STYLE>
+<!--[if IE]>
+<STYLE>
+#main_block {padding:10px 10;}
+#inmain_block {margin:0 0px}
+</STYLE>
+<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.7600.16535"></HEAD>
+<BODY bgColor=white>{BEGIN body}{$header} 
+{BEGIN contents_block}<TABLE style="BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid" id=center_block align=center><TR><TD id=contents_block><DIV id=header_block class=tableheader>List Ingredient Details - Advanced 
+      search </DIV>
+      {BEGIN conditions_block}<DIV id=conditions_block><SPAN 
+      class=fieldname>Search for: </SPAN><INPUT type=radio name=type 
+      {$all_checkbox}>All conditions &nbsp;&nbsp;&nbsp; <INPUT type=radio 
+      name=type {$any_checkbox}>Any condition </DIV>{END conditions_block}
+      <TABLE id=fields_block border=0 cellSpacing=0 cellPadding=4><TR class=blackshade vAlign=middle><TD vAlign=middle align=middle>&nbsp;</TD>
+          <TD class=fieldname vAlign=middle width=30 align=middle>NOT</TD>
+          <TD vAlign=middle colSpan=3 align=middle>&nbsp; </TD></TR>{BEGIN IName_fieldblock}<TR class=shade><TD class=fieldname>Ingredient Name
+	<TD align=middle><INPUT type=checkbox {$IName_notbox}></TD>
+          <TD>{$searchtype_IName}</TD>
+          <TD width=270>{$IName_editcontrol}</TD>
+          <TD width=270><SPAN id=second_IName>{$IName_editcontrol1} 
+          </SPAN></TD></TR>{END IName_fieldblock}
+        {BEGIN IfeedNo_fieldblock}<TR class=shade><TD class=fieldname>International Feed No.
+	<TD align=middle><INPUT type=checkbox {$IfeedNo_notbox}></TD>
+          <TD>{$searchtype_IfeedNo}</TD>
+          <TD width=270>{$IfeedNo_editcontrol}</TD>
+          <TD width=270><SPAN id=second_IfeedNo>{$IfeedNo_editcontrol1} 
+            </SPAN></TD></TR>{END IfeedNo_fieldblock}
+        {BEGIN Description1_fieldblock}<TR class=shade><TD class=fieldname>Ingredient type
+	<TD align=middle><INPUT type=checkbox {$Description1_notbox}></TD>
+          <TD>{$searchtype_Description1}</TD>
+          <TD width=270>{$Description1_editcontrol}</TD>
+          <TD width=270><SPAN id=second_Description1>{$Description1_editcontrol1} 
+            </SPAN></TD></TR>{END Description1_fieldblock}
+        {BEGIN Description2_fieldblock}<TR class=shade><TD class=fieldname>Specific ingr. source
+	<TD align=middle><INPUT type=checkbox {$Description2_notbox}></TD>
+          <TD>{$searchtype_Description2}</TD>
+          <TD width=270>{$Description2_editcontrol}</TD>
+          <TD width=270><SPAN id=second_Description2>{$Description2_editcontrol1} 
+            </SPAN></TD></TR>{END Description2_fieldblock}
+        {BEGIN Description3_fieldblock}<TR class=shade><TD class=fieldname>Add. ingredient details
+	<TD align=middle><INPUT type=checkbox {$Description3_notbox}></TD>
+          <TD>{$searchtype_Description3}</TD>
+          <TD width=270>{$Description3_editcontrol}</TD>
+          <TD width=270><SPAN id=second_Description3>{$Description3_editcontrol1} 
+            </SPAN></TD></TR>{END Description3_fieldblock}{BEGIN DataSource_fieldblock}<TR class=shade><TD class=fieldname>Data Source 
+          <TD align=middle><INPUT type=checkbox {$DataSource_notbox}></TD>
+          <TD>{$searchtype_DataSource}</TD>
+          <TD width=270>{$DataSource_editcontrol}</TD>
+          <TD width=270><SPAN id=second_DataSource>{$DataSource_editcontrol1} 
+            </SPAN></TD></TR>{END DataSource_fieldblock}
+        {BEGIN ICountry_fieldblock}<TR class=shade><TD class=fieldname>Ingredient Country
+	<TD align=middle><INPUT type=checkbox {$ICountry_notbox}></TD>
+          <TD>{$searchtype_ICountry}</TD>
+          <TD width=270>{$ICountry_editcontrol}</TD>
+          <TD width=270><SPAN id=second_ICountry>{$ICountry_editcontrol1} 
+            </SPAN></TD></TR>{END ICountry_fieldblock}
+        {BEGIN Species_fieldblock}<TR class=shade><TD class=fieldname>Species 
+          <TD align=middle><INPUT type=checkbox {$Species_notbox}></TD>
+          <TD>{$searchtype_Species}</TD>
+          <TD width=270>{$Species_editcontrol}</TD>
+          <TD width=270><SPAN id=second_Species>{$Species_editcontrol1} 
+            </SPAN></TD></TR>{END Species_fieldblock}</TABLE>
+      <DIV id=buttons_block class=blackshade>{BEGIN search_button}<SPAN class=buttonborder><INPUT class=button value=Search type=button {$searchbutton_attrs}></SPAN>{END search_button} 
+      {BEGIN reset_button}<SPAN class=buttonborder><INPUT class=button value=Reset type=button {$resetbutton_attrs}></SPAN>{END reset_button} 
+      {BEGIN back_button}<SPAN class=buttonborder><INPUT class=button value="Back to list" type=button {$backbutton_attrs}></SPAN>{END back_button} 
+      </DIV></TD></TR></TABLE>{END contents_block}{$footer} {END body}</BODY></HTML>

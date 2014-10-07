@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Vw Feed</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->{BEGIN style_block}
+<STYLE>
+#height100{$id} {padding:10px;}
+#toplinks_caption{$id} {padding:0px 30px;font-size:12px;font-weight:bold;}
+#mastertable_block{$id} {margin-left:50px;margin-top:10px}
+#toplinks_block{$id} {width:100%;padding:3px;padding-left:30px}
+#toplinks_block{$id} span {padding-left:5px;}
+#search_records_block{$id} { padding-left:20px;}
+#search_records_block{$id} > * {vertical-align:middle;}
+#search_records_block{$id} select {margin:3px 0px;}
+#login_block{$id} {padding:10px; margin-bottom:3px}
+#login_block{$id} * {margin-left:5px; padding:5px 0px;}
+#menu_block{$id} {padding:10px;}
+#menu_block{$id} * {list-style-type:none;}
+#menu_block{$id} IMG {vertical-align:middle;}
+#records_block{$id} {margin-left:203px;}
+#record_controls{$id} {padding:10px 10px;}
+#record_controls{$id} span {padding-left:10px;}
+#recordcontrolsadd_block{$id} {padding:10px 10px;border: solid; border-width: 1px; border-color: #C0C0C0;}
+#recordcontrolsadd_block{$id} span {padding-left:10px;}
+#grid_block{$id} {border:solid 1px #C0C0C0;}
+.grid_recordheader{$id} {padding:0 5px 5px;vertical-align:top;}
+.grid_recordheader{$id} * {margin:0px 5px; vertical-align:top;}
+body {margin:0px;padding:0px;}
+</STYLE>
+{END style_block}
+<META name=GENERATOR content="MSHTML 8.00.7600.16588"></HEAD>
+<BODY {$bodyattrs} marginwidth="0" marginheight="0">{BEGIN body}
+<DIV id="height100{$id}"><STRONG><FONT color=#004080 size=2>Listing Feed 
+Details:</FONT></STRONG>&nbsp;&nbsp; 
+{BEGIN mastertable_block}<DIV id="mastertable_block{$id}">{$showmasterfile} <A class=toplinks 
+{$backtomasterlink_attrs}><B>Back to Master table</B></A> <BR></DIV>{END mastertable_block}
+{BEGIN toplinks_block}<DIV id="toplinks_block{$id}">&nbsp; <SPAN id="login_block{$id}">Logged on as&nbsp;<B>{$username}</B>&nbsp; <A 
+href="login.php?a=logout">Log out</A> </SPAN>{BEGIN menu_block}<SPAN id="menu_block{$id}">Quick jump:&nbsp; <SELECT {$quickjump_attrs}><option value="menu.php">Back to menu</OPTION> 
+{$quickjump_options}</SELECT> </SPAN>{END menu_block}{BEGIN asearch_link}<SPAN><A 
+href="vw_feed_search.php">Advanced search</A></SPAN>{END asearch_link} </DIV>{END toplinks_block}
+<DIV id="recordcontrolsadd_block{$id}" class=shade>{BEGIN newrecord_controls}<SPAN id=newrecords_block class=shade>{BEGIN add_link}<SPAN class=shade><A href="vw_feed_add.php">Add 
+new</A> </SPAN>{END add_link}</SPAN>{END newrecord_controls}{BEGIN search_records_block}<SPAN id="search_records_block{$id}" class=shade>{BEGIN searchform}<SPAN id="searchform{$id}" class=shade><B>Search for: </B>&nbsp;&nbsp;&nbsp; {BEGIN searchform_field}<SELECT id="ctlSearchField{$id}"><option value="">Any field</OPTION> <option value="FName" {$FName_searchfieldoption}>Feed Name</OPTION> <option value="BrandName" {$BrandName_searchfieldoption}>Brand Name</OPTION> <option value="Technology" {$Technology_searchfieldoption}>Technology</OPTION> <option value="FeedYear" {$FeedYear_searchfieldoption}>Feed Year</OPTION> <option value="Stage" {$Stage_searchfieldoption}>Stage</OPTION> <option value="CountryOrigin" {$CountryOrigin_searchfieldoption}>Country Origin</OPTION> <option value="FDataSource" {$FDataSource_searchfieldoption}>Data Source</OPTION> <option value="FeedType" {$FeedType_searchfieldoption}>Feed Type</OPTION></SELECT>{END searchform_field} &nbsp; 
+{BEGIN searchform_option}<SELECT id="ctlSearchOption{$id}"><option value="Contains" {$Contains_searchtypeoption}>Contains</OPTION> <option value="Equals" {$Equals_searchtypeoption}>Equals</OPTION> <option value="Starts with ..." {$Starts_with_____searchtypeoption}>Starts with ...</OPTION> <option value="More than ..." {$More_than_____searchtypeoption}>More than ...</OPTION> <option value="Less than ..." {$Less_than_____searchtypeoption}>Less than ...</OPTION> 
+  <option value="Equal or more than ..." {$Equal_or_more_than_____searchtypeoption}>Equal or more than ...</OPTION> 
+  <option value="Equal or less than ..." {$Equal_or_less_than_____searchtypeoption}>Equal or less than ...</OPTION> 
+  <option value="Empty" {$Empty_searchtypeoption}>Empty</OPTION></SELECT>{END searchform_option} &nbsp; {BEGIN searchform_text}<INPUT {$searchfor_attrs}>{END searchform_text} &nbsp; {BEGIN searchform_search}<INPUT class=button value=Search type=button {$searchbutton_attrs}>{END searchform_search} 
+&nbsp; {BEGIN searchform_showall}<INPUT class=button value="Show all" type=button {$showallbutton_attrs}>{END searchform_showall} 
+</SPAN>{END searchform}{BEGIN details_block}<SPAN>Details found: <B>{$records_found}</B>&nbsp;&nbsp;&nbsp;&nbsp;</SPAN>{END details_block} 
+{BEGIN pages_block}<SPAN>Page <B>{$page}</B> of <B>{$maxpages}</B></SPAN>{END pages_block} 
+&nbsp;&nbsp;&nbsp;&nbsp; {BEGIN recordspp_block}<SPAN id="recordspp_block{$id}">Records Per Page: <SELECT 
+  {$recordspp_attrs}><option value="10" {$rpp10_selected}>10</OPTION> <option value="20" {$rpp20_selected}>20</OPTION> <option value="30" {$rpp30_selected}>30</OPTION> <option value="50" {$rpp50_selected}>50</OPTION> <option value="100" {$rpp100_selected}>100</OPTION> <option value="500" {$rpp500_selected}>500</OPTION></SELECT> </SPAN>{END recordspp_block}</SPAN>{END search_records_block}</DIV>
+{BEGIN record_controls}<DIV id="record_controls{$id}">{BEGIN delete_link}<SPAN><A href="#" {$deletelink_attrs}>Delete 
+selected</A></SPAN> {END delete_link}</DIV>{END record_controls}
+<DIV id="usermessage{$id}" class=message></DIV>
+{BEGIN grid_block}<TABLE id="grid_block{$id}" border=0 cellSpacing=2 cellPadding=3 name="maintable"><!--DWLayoutTable-->
+  <TBODY>
+  {BEGIN grid_header}<TR vAlign=top {$gridHeader_attrs}>{BEGIN record_header}
+    {BEGIN edit_column}<TD class=blackshade height=49 width=50 align=middle mywidth="56"><img src="include/img/icon_edit.gif"></TD>{END edit_column}
+    {BEGIN copy_column}<TD class=blackshade width=50 align=middle mywidth="56"><img src="include/img/icon_copy.gif"></TD>{END copy_column}
+    {BEGIN view_column}<TD class=blackshade width=50 align=middle mywidth="56"><img src="include/img/icon_view.gif"></TD>{END view_column}
+    {BEGIN checkbox_column}<TD class=blackshade width=50 align=middle mywidth="56">{BEGIN checkbox_header}<INPUT type=checkbox 
+      {$checkboxheader_attrs}> {END checkbox_header}</TD>{END checkbox_column}
+    {BEGIN FName_fieldheadercolumn}<TD class=blackshade mywidth="94">{BEGIN FName_fieldheader}<A class=blackshade 
+      {$FName_orderlinkattrs}><STRONG><FONT color=#008000 size=2>Feed 
+      Name</FONT></STRONG></A> {END FName_fieldheader}</TD>{END FName_fieldheadercolumn}
+    {BEGIN vw_fullfeedproxanalysis_dtable_column}<TD class=blackshade width=50 mywidth="344">&nbsp;</TD>{END vw_fullfeedproxanalysis_dtable_column}
+    {BEGIN vw_fullfeedelementanalysis_dtable_column}<TD class=blackshade width=50 mywidth="360">&nbsp;</TD>{END vw_fullfeedelementanalysis_dtable_column}
+    {BEGIN vw_feedanalysis_dtable_column}<TD class=blackshade vAlign=top width=44 mywidth="260"><!--DWLayoutEmptyCell-->&nbsp;</TD>{END vw_feedanalysis_dtable_column}
+    {BEGIN Technology_fieldheadercolumn}<TD class=blackshade mywidth="114">{BEGIN Technology_fieldheader}<A class=blackshade 
+      {$Technology_orderlinkattrs}>Technology</A> {END Technology_fieldheader}</TD>{END Technology_fieldheadercolumn}
+    {BEGIN CountryOrigin_fieldheadercolumn}<TD class=blackshade mywidth="129">{BEGIN CountryOrigin_fieldheader}<A 
+      class=blackshade {$CountryOrigin_orderlinkattrs}>Country Origin</A> {END CountryOrigin_fieldheader}</TD>{END CountryOrigin_fieldheadercolumn}
+    {BEGIN FeedType_fieldheadercolumn}<TD class=blackshade mywidth="104">{BEGIN FeedType_fieldheader}<A class=blackshade 
+      {$FeedType_orderlinkattrs}>Feed Type</A> {END FeedType_fieldheader}</TD>{END FeedType_fieldheadercolumn}
+    {BEGIN endrecordheader_block}<TD mywidth="11">&nbsp;</TD>{END endrecordheader_block}{END record_header}</TR>{END grid_header}
+  {BEGIN grid_row}<TR vAlign=top {$rowattrs} {$rowstyle}>{BEGIN grid_record}
+    {BEGIN edit_column}<TD vAlign=middle align=middle mywidth="56">{BEGIN edit_link}<A {$editlink_attrs}>Edit</A> {END edit_link}</TD>{END edit_column}
+    {BEGIN copy_column}<TD vAlign=middle align=middle mywidth="56">{BEGIN copy_link}<A {$copylink_attrs}>Copy</A> {END copy_link}</TD>{END copy_column}
+    {BEGIN view_column}<TD vAlign=middle align=middle mywidth="56">{BEGIN view_link}<A {$viewlink_attrs}>View</A> {END view_link}</TD>{END view_column}
+    {BEGIN checkbox_column}<TD vAlign=middle align=middle mywidth="56">{BEGIN checkbox}<INPUT type=checkbox 
+      {$checkbox_attrs}> {END checkbox}</TD>{END checkbox_column}
+    {BEGIN FName_fieldcolumn}<TD vAlign=middle align=left mywidth="94" {$FName_style}><STRONG>{$FName_value}</STRONG> </TD>{END FName_fieldcolumn}
+    {BEGIN vw_fullfeedproxanalysis_dtable_column}<TD vAlign=middle align=middle mywidth="344">{BEGIN vw_fullfeedproxanalysis_dtable_link}<A 
+      {$vw_fullfeedproxanalysis_dtablelink_attrs}><STRONG>Feed proximate 
+analysis{BEGIN vw_fullfeedproxanalysis_childcount}(</STRONG>{$vw_fullfeedproxanalysis_childnumber}<STRONG>)</STRONG> 
+{END vw_fullfeedproxanalysis_childcount}</A>{END vw_fullfeedproxanalysis_dtable_link}</TD>{END vw_fullfeedproxanalysis_dtable_column}
+    {BEGIN vw_fullfeedelementanalysis_dtable_column}<TD vAlign=middle align=middle mywidth="360">{BEGIN vw_fullfeedelementanalysis_dtable_link}<A 
+      {$vw_fullfeedelementanalysis_dtablelink_attrs}><STRONG>Feed element 
+      analysis{BEGIN vw_fullfeedelementanalysis_childcount}(</STRONG>{$vw_fullfeedelementanalysis_childnumber}<STRONG>) 
+{END vw_fullfeedelementanalysis_childcount}</STRONG></A>{END vw_fullfeedelementanalysis_dtable_link}</TD>{END vw_fullfeedelementanalysis_dtable_column}
+    {BEGIN vw_feedanalysis_dtable_column}<TD vAlign=middle align=middle mywidth="260">{BEGIN vw_feedanalysis_dtable_link}<A 
+      {$vw_feedanalysis_dtablelink_attrs}><STRONG>Feed analysis{BEGIN vw_feedanalysis_childcount}(</STRONG>{$vw_feedanalysis_childnumber}<STRONG>)</STRONG> 
+{END vw_feedanalysis_childcount}</A>{END vw_feedanalysis_dtable_link}</TD>{END vw_feedanalysis_dtable_column}
+    {BEGIN Technology_fieldcolumn}<TD vAlign=middle align=left mywidth="114" {$Technology_style}>{$Technology_value} </TD>{END Technology_fieldcolumn}
+    {BEGIN CountryOrigin_fieldcolumn}<TD vAlign=middle align=left mywidth="129" {$CountryOrigin_style}>{$CountryOrigin_value} </TD>{END CountryOrigin_fieldcolumn}
+    {BEGIN FeedType_fieldcolumn}<TD vAlign=middle align=left mywidth="104" {$FeedType_style}>{$FeedType_value} </TD>{END FeedType_fieldcolumn}
+    {BEGIN endrecord_block}<TD class=body2 {$endrecordblock_attrs} mywidth="11">&nbsp;</TD>{END endrecord_block}{END grid_record}</TR>{END grid_row}</TBODY></TABLE>{END grid_block}
+{BEGIN pagination_block}<DIV class=toplist align=center>{$pagination}</DIV>{END pagination_block}
+{BEGIN message_block}<DIV class=toplist align=center valign="middle"><B>{$message}</B></DIV>{END message_block}</DIV>{END body}</BODY></HTML>

@@ -1,0 +1,83 @@
+<html {$html_attrs}>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="include/style.css" type="text/css" />
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+<style>
+#center_block {width:30%;margin:0 auto;}
+#contents_block {text-align:center;}
+#header_block {white-space:nowrap;height:25px;padding:0 10px 5px;text-align:center;}
+#fields_block {width:100%;margin:0;padding:10px}
+#header_block > span {margin:0 5px}
+#buttons_block {padding:10px 10px 5px}
+#buttons_block div {padding:3px}
+</style>
+<!--[if IE]>
+<style>
+#fields_block td {padding:3px 14px}
+#username_block td {padding-top:13px}
+#remember_block td {padding-bottom:13px}
+</style>
+<![endif]-->
+</head>
+<body>
+{BEGIN body}
+{$header}
+<table align=center id="center_block">
+<tr><td id="contents_block">
+
+
+<div id="header_block" class="top blackshade">
+<b><font size=+1>Login</font></b></div>
+
+<table cellpadding=4 cellspacing=0 border=0 id="fields_block" class="shade">
+<tr id="username_block"> 
+	<td align=right width="50%" class=shade> 
+	<div align="left">{BEGIN username_label}Username:{END username_label}</div>
+		</td>
+	<td width="50%" class=shade> 
+		<input name=username {$username_attrs}>
+	</td>
+</tr>
+<tr id="password_block"> 
+	<td align=right width="50%" class=shade> 
+		<div align="left">{BEGIN password_label}Password:{END password_label}</div>
+	</td>
+	<td width="50%" class=shade> 
+		<input type=password name=password {$password_attrs}>
+	</td>
+</tr>
+<tr id="remember_block"> 
+	<td align=right width="50%" class=shade> 
+		<div align="left">{BEGIN remember_password_label}Remember Password:{END remember_password_label}</div>
+	</td>
+	<td width="50%" class=shade> 
+		<input type=checkbox {$rememberbox_attrs}>
+	</td>
+</tr>
+</table>
+<div id="buttons_block" class="shade">
+	<div id="submit_block">
+<input type=submit value="Submit" class=buttonM {$loginlink_attrs}>
+	</div>
+	{BEGIN message_block}
+	<div>
+	<font color=red>{$message}</font>
+	</div>
+	{END message_block}		
+
+	{BEGIN guestlink_block}
+	<div>
+	<a {$guestlink_attrs} >Login as Guest</a>
+	</div>
+	{END guestlink_block} 
+
+
+</div>
+</td></tr></table>
+{$footer}
+{END body}
+</body>
+</html>

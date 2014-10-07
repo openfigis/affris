@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML {$html_attrs}><HEAD><TITLE>Vw Feedspec</TITLE>
+<link REL="stylesheet" href="include/style.css" type="text/css"><!--[if IE]><link REL="stylesheet" href="include/styleIE.css" type="text/css"><![endif]-->
+<STYLE>
+#center_block{$id} {width:500px;margin:0 auto;}
+#contents_block{$id} {text-align:center;}
+#header_block{$id} {white-space:nowrap;height:31px;padding-top:5px;}
+#fields_block{$id} {width:100%}
+#buttons_block{$id} {padding-bottom:5px;white-space:nowrap;text-align:center;}
+#required_block{$id} {text-align:left;padding:5px}
+#message_block{$id} {padding:5px 0px}
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16535"></HEAD>
+<BODY>{BEGIN body}{$header} 
+<TABLE id="center_block{$id}" cellSpacing=0 cellPadding=0><TR><TD id="header_block{$id}">{BEGIN flybody}<DIV id="header_block{$id}"><H1>Species &amp; Feed listing, Add new record</H1></DIV>
+      {BEGIN message_block}<DIV id="message_block{$id}">{$message}</DIV>{END message_block}
+      <DIV align=left><HR SIZE=1 width=300 noShade>
+      </DIV>&nbsp;&nbsp;&nbsp;<A href="vw_feedspec_list.php?a=return">Back to 
+      list</A><BR><BR>
+      <TABLE id="fields_block{$id}" border=0 cellSpacing=2 cellPadding=4>{BEGIN FeedID_fieldblock}<TR><TD class=shade width=150>Feed ID</TD>
+          <TD width=250>{$FeedID_editcontrol} </TD></TR>{END FeedID_fieldblock}
+        {BEGIN Feed_fieldblock}<TR><TD class=shade width=150>Feed Name</TD>
+          <TD width=250>{$Feed_editcontrol} </TD></TR>{END Feed_fieldblock}
+        {BEGIN Brand_fieldblock}<TR><TD class=shade width=150>Brand</TD>
+          <TD width=250>{$Brand_editcontrol} </TD></TR>{END Brand_fieldblock}
+        {BEGIN Technology_fieldblock}<TR><TD class=shade width=150>Technology</TD>
+          <TD width=250>{$Technology_editcontrol} </TD></TR>{END Technology_fieldblock}
+        {BEGIN Feed_Year_fieldblock}<TR><TD class=shade width=150>Feed Year</TD>
+          <TD width=250>{$Feed_Year_editcontrol} </TD></TR>{END Feed_Year_fieldblock}
+        {BEGIN Stage_fieldblock}<TR><TD class=shade width=150>Stage</TD>
+          <TD width=250>{$Stage_editcontrol} </TD></TR>{END Stage_fieldblock}
+        {BEGIN FCountryID_fieldblock}<TR><TD class=shade width=150>FCountry ID</TD>
+          <TD width=250>{$FCountryID_editcontrol} </TD></TR>{END FCountryID_fieldblock}
+        {BEGIN Country_Origin_fieldblock}<TR><TD class=shade width=150>Country Origin</TD>
+          <TD width=250>{$Country_Origin_editcontrol} </TD></TR>{END Country_Origin_fieldblock}
+        {BEGIN FIDSourceID_fieldblock}<TR><TD class=shade width=150>FIDSource ID</TD>
+          <TD width=250>{$FIDSourceID_editcontrol} </TD></TR>{END FIDSourceID_fieldblock}
+        {BEGIN Data_Source_fieldblock}<TR><TD class=shade width=150>Data Source</TD>
+          <TD width=250>{$Data_Source_editcontrol} </TD></TR>{END Data_Source_fieldblock}
+        {BEGIN FeedTypeID_fieldblock}<TR><TD class=shade width=150>Feed Type ID</TD>
+          <TD width=250>{$FeedTypeID_editcontrol} </TD></TR>{END FeedTypeID_fieldblock}
+        {BEGIN Type_fieldblock}<TR><TD class=shade width=150>Feed Type</TD>
+          <TD width=250>{$Type_editcontrol} </TD></TR>{END Type_fieldblock}
+        {BEGIN SpeciesID_fieldblock}<TR><TD class=shade width=150>Species ID</TD>
+          <TD width=250>{$SpeciesID_editcontrol} </TD></TR>{END SpeciesID_fieldblock}
+        {BEGIN Species_Name_fieldblock}<TR><TD class=shade width=150>Species Name</TD>
+          <TD width=250>{$Species_Name_editcontrol} </TD></TR>{END Species_Name_fieldblock}
+        {BEGIN Common_Name_fieldblock}<TR><TD class=shade width=150>Common Name</TD>
+          <TD width=250>{$Common_Name_editcontrol} </TD></TR>{END Common_Name_fieldblock}
+        {BEGIN Hybrid_fieldblock}<TR><TD class=shade width=150>Hybrid</TD>
+          <TD width=250>{$Hybrid_editcontrol} </TD></TR>{END Hybrid_fieldblock}
+        {BEGIN Variety_fieldblock}<TR><TD class=shade width=150>Variety</TD>
+          <TD width=250>{$Variety_editcontrol} </TD></TR>{END Variety_fieldblock}
+        {BEGIN Family_fieldblock}<TR><TD class=shade width=150>Family</TD>
+          <TD width=250>{$Family_editcontrol} </TD></TR>{END Family_fieldblock}
+        {BEGIN Group_fieldblock}<TR><TD class=shade width=150>Group</TD>
+          <TD width=250>{$Group_editcontrol} </TD></TR>{END Group_fieldblock}
+        {BEGIN Genus_fieldblock}<TR><TD class=shade width=150>Genus</TD>
+          <TD width=250>{$Genus_editcontrol} </TD></TR>{END Genus_fieldblock}
+        {BEGIN Environment_fieldblock}<TR><TD class=shade width=150>Environment</TD>
+          <TD width=250>{$Environment_editcontrol} </TD></TR>{END Environment_fieldblock}
+        {BEGIN Habit_fieldblock}<TR><TD class=shade width=150>Feeding Habit</TD>
+          <TD width=250>{$Habit_editcontrol} </TD></TR>{END Habit_fieldblock}
+        {BEGIN Country_fieldblock}<TR><TD class=shade width=150>Country</TD>
+          <TD width=250>{$Country_editcontrol} </TD></TR>{END Country_fieldblock}
+        {BEGIN Species_Year_fieldblock}<TR><TD class=shade width=150>Species Year</TD>
+          <TD width=250>{$Species_Year_editcontrol} 
+        </TD></TR>{END Species_Year_fieldblock}</TABLE>
+      <DIV id="buttons_block{$id}"><DIV align=left><HR SIZE=1 width=300 noShade>
+      </DIV>
+      <DIV id="required_block{$id}"><IMG src="images/icon_required.gif"> - 
+      Required field</DIV>{BEGIN save_button}<INPUT class=button value=Save type=submit name=submit1>{END save_button} 
+{BEGIN reset_button}<INPUT class=button value=Reset type=reset {$resetbutton_attrs}>{END reset_button} 
+{BEGIN cancel_button}<INPUT class=button value=Cancel type=button {$cancelbutton_attrs}>{END cancel_button} 
+      </DIV>{END flybody}</TD></TR></TABLE>{$footer} {END body}</BODY></HTML>

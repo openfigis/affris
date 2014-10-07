@@ -1,0 +1,157 @@
+<html {$html_attrs}>
+<head>
+<title>Vw Fullingredientproxanalysis</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+<style>
+.grid_block {  
+margin-top:5px;
+border-collapse: collapse;
+align:center;
+width:95%;
+border:none;
+} 
+.grid_block td { 
+ padding: 5px; 
+ margin: 0px; 
+ border: solid black 1px;
+}
+.grid_block .gridspacing {width:20px;border-top-color:white; border-bottom-color:white;background-color:white}
+@media print 
+{
+	a.pdf {display:none}
+}
+.printpage {page-break-after:always}
+#selpage{margin-left:30px;}
+</style> 
+</head>
+<body style="background-color:white">
+{BEGIN body}
+{$header}
+{BEGIN page}
+{BEGIN mastertable_block}
+<div id="mastertable_block">
+{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<h1>Vw Fullingredientproxanalysis</h1>
+{BEGIN page_number}
+<div id='selpage'>Page {$pageno} of {$maxpages} </div>
+{END page_number}
+
+{BEGIN grid_block}
+
+<table align="center" cellpadding=5 class="grid_block">
+{BEGIN grid_header}
+<tr>
+{BEGIN record_header}
+{BEGIN IngredientID_fieldheadercolumn}
+	<td>
+{BEGIN IngredientID_fieldheader}
+	<b>Ingredient ID</b>
+{END IngredientID_fieldheader}
+	</td>
+{END IngredientID_fieldheadercolumn}
+{BEGIN ElementTypeID_fieldheadercolumn}
+	<td>
+{BEGIN ElementTypeID_fieldheader}
+	<b>Element Type ID</b>
+{END ElementTypeID_fieldheader}
+	</td>
+{END ElementTypeID_fieldheadercolumn}
+{BEGIN Description_fieldheadercolumn}
+	<td>
+{BEGIN Description_fieldheader}
+	<b>Description</b>
+{END Description_fieldheader}
+	</td>
+{END Description_fieldheadercolumn}
+{BEGIN UnitName_fieldheadercolumn}
+	<td>
+{BEGIN UnitName_fieldheader}
+	<b>Unit Name</b>
+{END UnitName_fieldheader}
+	</td>
+{END UnitName_fieldheadercolumn}
+{BEGIN UnitSymbol_fieldheadercolumn}
+	<td>
+{BEGIN UnitSymbol_fieldheader}
+	<b>Unit Symbol</b>
+{END UnitSymbol_fieldheader}
+	</td>
+{END UnitSymbol_fieldheadercolumn}
+{BEGIN UnitDecimal_fieldheadercolumn}
+	<td>
+{BEGIN UnitDecimal_fieldheader}
+	<b>Unit Decimal</b>
+{END UnitDecimal_fieldheader}
+	</td>
+{END UnitDecimal_fieldheadercolumn}
+{BEGIN ETValue_fieldheadercolumn}
+	<td>
+{BEGIN ETValue_fieldheader}
+	<b>ETValue</b>
+{END ETValue_fieldheader}
+	</td>
+{END ETValue_fieldheadercolumn}
+{BEGIN endrecordheader_block}
+	<td class="gridspacing">&nbsp;</td>
+{END endrecordheader_block}
+{END record_header}
+</tr>
+{END grid_header}
+{BEGIN grid_row}
+<tr valign=top {$rowstyle} {$rowattrs}>
+{BEGIN grid_record}
+{BEGIN IngredientID_fieldcolumn}
+<td {$IngredientID_style}>
+{$IngredientID_value}
+</td>
+{END IngredientID_fieldcolumn}
+{BEGIN ElementTypeID_fieldcolumn}
+<td {$ElementTypeID_style}>
+{$ElementTypeID_value}
+</td>
+{END ElementTypeID_fieldcolumn}
+{BEGIN Description_fieldcolumn}
+<td {$Description_style}>
+{$Description_value}
+</td>
+{END Description_fieldcolumn}
+{BEGIN UnitName_fieldcolumn}
+<td {$UnitName_style}>
+{$UnitName_value}
+</td>
+{END UnitName_fieldcolumn}
+{BEGIN UnitSymbol_fieldcolumn}
+<td {$UnitSymbol_style}>
+{$UnitSymbol_value}
+</td>
+{END UnitSymbol_fieldcolumn}
+{BEGIN UnitDecimal_fieldcolumn}
+<td {$UnitDecimal_style}>
+{$UnitDecimal_value}
+</td>
+{END UnitDecimal_fieldcolumn}
+{BEGIN ETValue_fieldcolumn}
+<td {$ETValue_style}>
+{$ETValue_value}
+</td>
+{END ETValue_fieldcolumn}
+{BEGIN endrecord_block}
+<td class="gridspacing">&nbsp;</td>
+{END endrecord_block}
+{END grid_record}
+</tr>
+{END grid_row}
+<!-- totals row -->
+</table>
+{END grid_block}
+{END page}
+{$footer}
+{END body}
+</body>
+</html>

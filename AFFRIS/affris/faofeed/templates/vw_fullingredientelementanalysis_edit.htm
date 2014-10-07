@@ -1,0 +1,125 @@
+<html {$html_attrs}>
+<head><title>Vw Fullingredientelementanalysis</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+<style>
+#center_block {width:500px;margin:0 auto;}
+#contents_block {text-align:center;width:100%}
+#header_block {width:100%;white-space:nowrap;height:31px;padding-top:5px;}
+#fields_block {width:100%}
+#fields_block td {padding-left:10px}
+#buttons_block {width:100%;padding-bottom:5px;text-align:center}
+#required_block {text-align:left;padding:5px}
+#message_block {padding:5px 0px;text-align:center}
+#span {margin:0 20px 0 20px;}
+</style>
+</head>
+
+<body>
+{BEGIN body}
+{$header}
+<table id="center_block"><tr><td>
+<div id="header_block">
+<h1>
+Vw Fullingredientelementanalysis, Edit record [
+Ingredient ID: {$show_key1}
+]
+</h1>
+</div>
+{BEGIN message_block}
+<DIV id=message_block>
+{$message}
+</div>
+{END message_block}
+
+<div align=left><hr width=300 noshade size=1></div>
+
+&nbsp;&nbsp;&nbsp;<a href="vw_fullingredientelementanalysis_list.php?a=return">Back to list</a><br><br>
+<table cellpadding=4 cellspacing=2 border=0 id="fields_block">
+
+  {BEGIN IngredientID_fieldblock}
+  <tr><td class=shade width=150>Ingredient ID</td><td width=250>
+    {$IngredientID_editcontrol}
+      &nbsp;<img src="images/icon_required.gif">
+  </td></tr>
+  {END IngredientID_fieldblock}
+  {BEGIN ElementID_fieldblock}
+  <tr><td class=shade width=150>Element ID</td><td width=250>
+    {$ElementID_editcontrol}
+    </td></tr>
+  {END ElementID_fieldblock}
+  {BEGIN EName_fieldblock}
+  <tr><td class=shade width=150>Element Name</td><td width=250>
+    {$EName_editcontrol}
+    </td></tr>
+  {END EName_fieldblock}
+  {BEGIN CommonName_fieldblock}
+  <tr><td class=shade width=150>Symbol/Common Name</td><td width=250>
+    {$CommonName_editcontrol}
+    </td></tr>
+  {END CommonName_fieldblock}
+  {BEGIN TagName_fieldblock}
+  <tr><td class=shade width=150>Technical description</td><td width=250>
+    {$TagName_editcontrol}
+    </td></tr>
+  {END TagName_fieldblock}
+  {BEGIN ElementTypeID_fieldblock}
+  <tr><td class=shade width=150>Element Type ID</td><td width=250>
+    {$ElementTypeID_editcontrol}
+    </td></tr>
+  {END ElementTypeID_fieldblock}
+  {BEGIN Description_fieldblock}
+  <tr><td class=shade width=150>Category</td><td width=250>
+    {$Description_editcontrol}
+    </td></tr>
+  {END Description_fieldblock}
+  {BEGIN UnitID_fieldblock}
+  <tr><td class=shade width=150>Unit ID</td><td width=250>
+    {$UnitID_editcontrol}
+    </td></tr>
+  {END UnitID_fieldblock}
+  {BEGIN UnitName_fieldblock}
+  <tr><td class=shade width=150>Unit Name</td><td width=250>
+    {$UnitName_editcontrol}
+    </td></tr>
+  {END UnitName_fieldblock}
+  {BEGIN UnitSymbol_fieldblock}
+  <tr><td class=shade width=150>Unit Symbol</td><td width=250>
+    {$UnitSymbol_editcontrol}
+    </td></tr>
+  {END UnitSymbol_fieldblock}
+  {BEGIN UnitDecimal_fieldblock}
+  <tr><td class=shade width=150>Unit Decimal</td><td width=250>
+    {$UnitDecimal_editcontrol}
+    </td></tr>
+  {END UnitDecimal_fieldblock}
+  {BEGIN IValue_fieldblock}
+  <tr><td class=shade width=150>Inclusion</td><td width=250>
+    {$IValue_editcontrol}
+    </td></tr>
+  {END IValue_fieldblock}
+</table>
+<div id="buttons_block">
+<div align=left><hr width=300 noshade size=1></div>
+<div id="required_block" ><img src="images/icon_required.gif"> - Required field</div>
+{BEGIN save_button}
+ <input class=button type=submit value="Save">
+{END save_button}
+{BEGIN reset_button}
+ <input class=button type=reset value="Reset" {$resetbutton_attrs}>
+{END reset_button}
+<span id="span">&nbsp;</span>
+{BEGIN prev_button}
+<input id=prev class=button type=reset value=" <<< " {$prevbutton_attrs}>
+{END prev_button}
+{BEGIN next_button}
+<input id=next class=button type=reset value=" >>> " {$nextbutton_attrs}>
+{END next_button}
+</div>
+</td></tr></table>
+{$footer}
+{END body}
+</body>
+</html>

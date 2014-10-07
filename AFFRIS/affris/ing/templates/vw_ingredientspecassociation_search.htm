@@ -1,0 +1,311 @@
+<html {$html_attrs}>
+<head>
+<title>Vw Ingredientspecassociation: Advanced search page</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<!--[if IE]>
+<link REL="stylesheet" href="include/styleIE.css" type="text/css">
+<![endif]-->
+<style>
+#center_block{$id} {margin:0 auto;}
+#contents_block{$id} {text-align:center;width:100%}
+#header_block{$id} {white-space:nowrap;height:31px;padding-top:5px;}
+#main_block{$id} {padding:10px 0;width:100%}
+#inmain_block{$id} {margin:0 10px}
+#fields_block{$id} {width:100%}
+#buttons_block{$id} {width:100%;padding:10px 0;}
+#buttons_block{$id} > * {margin:0 2px}
+</style>
+<!--[if IE]>
+<style>
+#main_block {padding:10px 10;}
+#inmain_block {margin:0 0px}
+</style>
+<![endif]-->
+</head>
+<body bgcolor=white {$bodyattrs}>
+{BEGIN body}
+{$header}	
+{BEGIN contents_block}
+<table align=center id="center_block{$id}" style="BORDER: #cccccc 1px solid;"><tr><td id="contents_block{$id}">
+	
+<div id="header_block{$id}" class=tableheader>
+Vw Ingredientspecassociation - Advanced search
+</div>
+
+{BEGIN conditions_block}
+<DIV id="conditions_block{$id}">
+<span class=fieldname>Search for: </span>
+<input type="radio" name="srchType" {$all_checkbox}>{BEGIN all_checkbox_label}All conditions{END all_checkbox_label}
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="srchType" {$any_checkbox}>{BEGIN any_checkbox_label}Any condition{END any_checkbox_label}
+</div>
+{END conditions_block}
+
+<table cellpadding=4 cellspacing=0 border=0 id="fields_block{$id}">
+<tr valign=center class=blackshade>
+<td align=center valign=middle>&nbsp;</td>
+<td width=30 align=center valign=middle class=fieldname>NOT</td>
+<td colspan=3 align=center valign=middle>&nbsp; </td></tr>
+
+{BEGIN IngredientID_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Ingredient ID
+	<td align=center><input type=checkbox {$IngredientID_notbox}></td>
+	<td>{$searchtype_IngredientID}</td>
+	<td width=270>{$IngredientID_editcontrol}&nbsp;</td>
+    <td width=270>{$IngredientID_editcontrol1}&nbsp;</td>
+</tr>
+{END IngredientID_fieldblock}	
+{BEGIN SpeciesID_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Species ID
+	<td align=center><input type=checkbox {$SpeciesID_notbox}></td>
+	<td>{$searchtype_SpeciesID}</td>
+	<td width=270>{$SpeciesID_editcontrol}&nbsp;</td>
+    <td width=270>{$SpeciesID_editcontrol1}&nbsp;</td>
+</tr>
+{END SpeciesID_fieldblock}	
+{BEGIN IngredientSpecID_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Ingredient Spec ID
+	<td align=center><input type=checkbox {$IngredientSpecID_notbox}></td>
+	<td>{$searchtype_IngredientSpecID}</td>
+	<td width=270>{$IngredientSpecID_editcontrol}&nbsp;</td>
+    <td width=270>{$IngredientSpecID_editcontrol1}&nbsp;</td>
+</tr>
+{END IngredientSpecID_fieldblock}	
+{BEGIN CountryID_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Country ID
+	<td align=center><input type=checkbox {$CountryID_notbox}></td>
+	<td>{$searchtype_CountryID}</td>
+	<td width=270>{$CountryID_editcontrol}&nbsp;</td>
+    <td width=270>{$CountryID_editcontrol1}&nbsp;</td>
+</tr>
+{END CountryID_fieldblock}	
+{BEGIN IName_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>IName
+	<td align=center><input type=checkbox {$IName_notbox}></td>
+	<td>{$searchtype_IName}</td>
+	<td width=270>{$IName_editcontrol}&nbsp;</td>
+    <td width=270>{$IName_editcontrol1}&nbsp;</td>
+</tr>
+{END IName_fieldblock}	
+{BEGIN IfeedNo_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Ifeed No
+	<td align=center><input type=checkbox {$IfeedNo_notbox}></td>
+	<td>{$searchtype_IfeedNo}</td>
+	<td width=270>{$IfeedNo_editcontrol}&nbsp;</td>
+    <td width=270>{$IfeedNo_editcontrol1}&nbsp;</td>
+</tr>
+{END IfeedNo_fieldblock}	
+{BEGIN Description1_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Description1
+	<td align=center><input type=checkbox {$Description1_notbox}></td>
+	<td>{$searchtype_Description1}</td>
+	<td width=270>{$Description1_editcontrol}&nbsp;</td>
+    <td width=270>{$Description1_editcontrol1}&nbsp;</td>
+</tr>
+{END Description1_fieldblock}	
+{BEGIN Description2_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Description2
+	<td align=center><input type=checkbox {$Description2_notbox}></td>
+	<td>{$searchtype_Description2}</td>
+	<td width=270>{$Description2_editcontrol}&nbsp;</td>
+    <td width=270>{$Description2_editcontrol1}&nbsp;</td>
+</tr>
+{END Description2_fieldblock}	
+{BEGIN Description3_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Description3
+	<td align=center><input type=checkbox {$Description3_notbox}></td>
+	<td>{$searchtype_Description3}</td>
+	<td width=270>{$Description3_editcontrol}&nbsp;</td>
+    <td width=270>{$Description3_editcontrol1}&nbsp;</td>
+</tr>
+{END Description3_fieldblock}	
+{BEGIN IisDetail_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Iis Detail
+	<td align=center><input type=checkbox {$IisDetail_notbox}></td>
+	<td>{$searchtype_IisDetail}</td>
+	<td width=270>{$IisDetail_editcontrol}&nbsp;</td>
+    <td width=270>{$IisDetail_editcontrol1}&nbsp;</td>
+</tr>
+{END IisDetail_fieldblock}	
+{BEGIN IDSourceID_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>IDSource ID
+	<td align=center><input type=checkbox {$IDSourceID_notbox}></td>
+	<td>{$searchtype_IDSourceID}</td>
+	<td width=270>{$IDSourceID_editcontrol}&nbsp;</td>
+    <td width=270>{$IDSourceID_editcontrol1}&nbsp;</td>
+</tr>
+{END IDSourceID_fieldblock}	
+{BEGIN DataSource_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Data Source
+	<td align=center><input type=checkbox {$DataSource_notbox}></td>
+	<td>{$searchtype_DataSource}</td>
+	<td width=270>{$DataSource_editcontrol}&nbsp;</td>
+    <td width=270>{$DataSource_editcontrol1}&nbsp;</td>
+</tr>
+{END DataSource_fieldblock}	
+{BEGIN ICountry_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>ICountry
+	<td align=center><input type=checkbox {$ICountry_notbox}></td>
+	<td>{$searchtype_ICountry}</td>
+	<td width=270>{$ICountry_editcontrol}&nbsp;</td>
+    <td width=270>{$ICountry_editcontrol1}&nbsp;</td>
+</tr>
+{END ICountry_fieldblock}	
+{BEGIN Species_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Species
+	<td align=center><input type=checkbox {$Species_notbox}></td>
+	<td>{$searchtype_Species}</td>
+	<td width=270>{$Species_editcontrol}&nbsp;</td>
+    <td width=270>{$Species_editcontrol1}&nbsp;</td>
+</tr>
+{END Species_fieldblock}	
+{BEGIN SpecName_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Spec Name
+	<td align=center><input type=checkbox {$SpecName_notbox}></td>
+	<td>{$searchtype_SpecName}</td>
+	<td width=270>{$SpecName_editcontrol}&nbsp;</td>
+    <td width=270>{$SpecName_editcontrol1}&nbsp;</td>
+</tr>
+{END SpecName_fieldblock}	
+{BEGIN CommonName_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Common Name
+	<td align=center><input type=checkbox {$CommonName_notbox}></td>
+	<td>{$searchtype_CommonName}</td>
+	<td width=270>{$CommonName_editcontrol}&nbsp;</td>
+    <td width=270>{$CommonName_editcontrol1}&nbsp;</td>
+</tr>
+{END CommonName_fieldblock}	
+{BEGIN Hybrid_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Hybrid
+	<td align=center><input type=checkbox {$Hybrid_notbox}></td>
+	<td>{$searchtype_Hybrid}</td>
+	<td width=270>{$Hybrid_editcontrol}&nbsp;</td>
+    <td width=270>{$Hybrid_editcontrol1}&nbsp;</td>
+</tr>
+{END Hybrid_fieldblock}	
+{BEGIN Variety_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Variety
+	<td align=center><input type=checkbox {$Variety_notbox}></td>
+	<td>{$searchtype_Variety}</td>
+	<td width=270>{$Variety_editcontrol}&nbsp;</td>
+    <td width=270>{$Variety_editcontrol1}&nbsp;</td>
+</tr>
+{END Variety_fieldblock}	
+{BEGIN Family_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Family
+	<td align=center><input type=checkbox {$Family_notbox}></td>
+	<td>{$searchtype_Family}</td>
+	<td width=270>{$Family_editcontrol}&nbsp;</td>
+    <td width=270>{$Family_editcontrol1}&nbsp;</td>
+</tr>
+{END Family_fieldblock}	
+{BEGIN Group_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Group
+	<td align=center><input type=checkbox {$Group_notbox}></td>
+	<td>{$searchtype_Group}</td>
+	<td width=270>{$Group_editcontrol}&nbsp;</td>
+    <td width=270>{$Group_editcontrol1}&nbsp;</td>
+</tr>
+{END Group_fieldblock}	
+{BEGIN Genus_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Genus
+	<td align=center><input type=checkbox {$Genus_notbox}></td>
+	<td>{$searchtype_Genus}</td>
+	<td width=270>{$Genus_editcontrol}&nbsp;</td>
+    <td width=270>{$Genus_editcontrol1}&nbsp;</td>
+</tr>
+{END Genus_fieldblock}	
+{BEGIN Environment_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Environment
+	<td align=center><input type=checkbox {$Environment_notbox}></td>
+	<td>{$searchtype_Environment}</td>
+	<td width=270>{$Environment_editcontrol}&nbsp;</td>
+    <td width=270>{$Environment_editcontrol1}&nbsp;</td>
+</tr>
+{END Environment_fieldblock}	
+{BEGIN FeedHabit_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Feed Habit
+	<td align=center><input type=checkbox {$FeedHabit_notbox}></td>
+	<td>{$searchtype_FeedHabit}</td>
+	<td width=270>{$FeedHabit_editcontrol}&nbsp;</td>
+    <td width=270>{$FeedHabit_editcontrol1}&nbsp;</td>
+</tr>
+{END FeedHabit_fieldblock}	
+{BEGIN Country_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Country
+	<td align=center><input type=checkbox {$Country_notbox}></td>
+	<td>{$searchtype_Country}</td>
+	<td width=270>{$Country_editcontrol}&nbsp;</td>
+    <td width=270>{$Country_editcontrol1}&nbsp;</td>
+</tr>
+{END Country_fieldblock}	
+{BEGIN SpecYear_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Spec Year
+	<td align=center><input type=checkbox {$SpecYear_notbox}></td>
+	<td>{$searchtype_SpecYear}</td>
+	<td width=270>{$SpecYear_editcontrol}&nbsp;</td>
+    <td width=270>{$SpecYear_editcontrol1}&nbsp;</td>
+</tr>
+{END SpecYear_fieldblock}	
+{BEGIN lower_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Lower
+	<td align=center><input type=checkbox {$lower_notbox}></td>
+	<td>{$searchtype_lower}</td>
+	<td width=270>{$lower_editcontrol}&nbsp;</td>
+    <td width=270>{$lower_editcontrol1}&nbsp;</td>
+</tr>
+{END lower_fieldblock}	
+{BEGIN upper_fieldblock}	
+<tr class=shade>
+	<td class=fieldname>Upper
+	<td align=center><input type=checkbox {$upper_notbox}></td>
+	<td>{$searchtype_upper}</td>
+	<td width=270>{$upper_editcontrol}&nbsp;</td>
+    <td width=270>{$upper_editcontrol1}&nbsp;</td>
+</tr>
+{END upper_fieldblock}	
+</table>
+
+<div class="blackshade" id="buttons_block{$id}">
+{BEGIN search_button}
+ <span class=buttonborder><input class=button type=button value="Search" {$searchbutton_attrs}></span>
+{END search_button} 
+{BEGIN reset_button}
+ <span class=buttonborder><input class=button type=button value="Reset" {$resetbutton_attrs}></span>
+{END reset_button}
+{BEGIN back_button}
+ <span class=buttonborder><input class=button type=button value="Back to list" {$backbutton_attrs}></span>
+{END back_button}
+</div>
+</td></tr></table>
+{END contents_block}
+{$footer}
+{END body}
+</body>
+</html>
