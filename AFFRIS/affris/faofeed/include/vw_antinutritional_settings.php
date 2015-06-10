@@ -5,6 +5,7 @@ $fieldLabelsvw_antinutritional = array();
 $fieldLabelsvw_antinutritional["English"]=array();
 $fieldLabelsvw_antinutritional["English"]["IngredientID"] = "Ingredient ID";
 $fieldLabelsvw_antinutritional["English"]["IName"] = "Ingredient Name";
+$fieldLabelsvw_antinutritional["English"]["SciName"] = "Sci Name";
 $fieldLabelsvw_antinutritional["English"]["Description"] = "Description";
 $fieldLabelsvw_antinutritional["English"]["AntiID"] = "Anti ID";
 $fieldLabelsvw_antinutritional["English"]["AntiFactor"] = "Anti Factor";
@@ -80,6 +81,32 @@ $tdatavw_antinutritional=array();
 				$fdata["ListPage"]=true;
 	$tdatavw_antinutritional["IName"]=$fdata;
 	
+//	Sci Name 
+	$fdata = array();
+	 $fdata["Label"]="Sci Name"; 
+	
+	$fdata["FieldType"]= 200;
+		$fdata["EditFormat"]= "Text field";
+	$fdata["ViewFormat"]= "";
+	
+	
+		
+				$fdata["NeedEncode"]=true;
+	
+	$fdata["GoodName"]= "SciName";
+		$fdata["FullName"]= "SciName";
+	
+	
+	
+	
+	$fdata["Index"]= 3;
+	
+			$fdata["EditParams"]="";
+			$fdata["EditParams"].= " maxlength=200";
+					$fdata["FieldPermissions"]=true;
+				$fdata["ListPage"]=true;
+	$tdatavw_antinutritional["SciName"]=$fdata;
+
 //	Description
 	$fdata = array();
 	
@@ -99,7 +126,7 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 3;
+	$fdata["Index"]= 4;
 	
 			$fdata["EditParams"]="";
 			$fdata["EditParams"].= " maxlength=200";
@@ -126,7 +153,7 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 4;
+	$fdata["Index"]= 5;
 	
 			$fdata["EditParams"]="";
 						$fdata["FieldPermissions"]=true;
@@ -151,7 +178,7 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 5;
+	$fdata["Index"]= 6;
 	
 			$fdata["EditParams"]="";
 			$fdata["EditParams"].= " maxlength=200";
@@ -178,7 +205,7 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 6;
+	$fdata["Index"]= 7;
 	
 			$fdata["EditParams"]="";
 			$fdata["EditParams"].= " maxlength=200";
@@ -205,7 +232,7 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 7;
+	$fdata["Index"]= 8;
 	
 			$fdata["EditParams"]="";
 						$fdata["FieldPermissions"]=true;
@@ -230,7 +257,7 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 8;
+	$fdata["Index"]= 9;
 	
 			$fdata["EditParams"]="";
 			$fdata["EditParams"].= " maxlength=200";
@@ -257,7 +284,7 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 9;
+	$fdata["Index"]= 10;
 	
 			$fdata["EditParams"]="";
 						$fdata["FieldPermissions"]=true;
@@ -282,7 +309,7 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 10;
+	$fdata["Index"]= 11;
 	
 			$fdata["EditParams"]="";
 			$fdata["EditParams"].= " maxlength=200";
@@ -309,7 +336,7 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 11;
+	$fdata["Index"]= 12;
 	
 			$fdata["EditParams"]="";
 						$fdata["FieldPermissions"]=true;
@@ -334,13 +361,14 @@ $tdatavw_antinutritional=array();
 	
 	
 	
-	$fdata["Index"]= 12;
+	$fdata["Index"]= 13;
 	
 			$fdata["EditParams"]="";
 			$fdata["EditParams"].= " maxlength=200";
 					$fdata["FieldPermissions"]=true;
 				$fdata["ListPage"]=true;
 	$tdatavw_antinutritional["PartUsed"]=$fdata;
+
 $tables_data["vw_antinutritional"]=&$tdatavw_antinutritional;
 $field_labels["vw_antinutritional"] = &$fieldLabelsvw_antinutritional;
 

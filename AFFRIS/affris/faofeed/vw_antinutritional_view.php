@@ -128,6 +128,16 @@ $keylink.="&key1=".htmlspecialchars(rawurlencode(@$data["IngredientID"]));
 		$value = ProcessLargeText(GetData($data,"IName", ""),"","",MODE_VIEW);
 	$xt->assign("IName_value",$value);
 	$xt->assign("IName_fieldblock",true);
+
+	
+////////////////////////////////////////////
+//	SciName - 
+	$value="";
+		$value = ProcessLargeText(GetData($data,"SciName", ""),"","",MODE_VIEW);
+	$xt->assign("SciName_value",$value);
+	$xt->assign("SciName_fieldblock",true);
+	
+	
 ////////////////////////////////////////////
 //	Description - 
 	$value="";
@@ -141,23 +151,11 @@ $keylink.="&key1=".htmlspecialchars(rawurlencode(@$data["IngredientID"]));
 	$xt->assign("AntiFactor_value",$value);
 	$xt->assign("AntiFactor_fieldblock",true);
 ////////////////////////////////////////////
-//	ToxicLevel - 
-	$value="";
-		$value = ProcessLargeText(GetData($data,"ToxicLevel", ""),"","",MODE_VIEW);
-	$xt->assign("ToxicLevel_value",$value);
-	$xt->assign("ToxicLevel_fieldblock",true);
-////////////////////////////////////////////
 //	Treatment - 
 	$value="";
 		$value = ProcessLargeText(GetData($data,"Treatment", ""),"","",MODE_VIEW);
 	$xt->assign("Treatment_value",$value);
 	$xt->assign("Treatment_fieldblock",true);
-////////////////////////////////////////////
-//	DataSource - 
-	$value="";
-		$value = ProcessLargeText(GetData($data,"DataSource", ""),"","",MODE_VIEW);
-	$xt->assign("DataSource_value",$value);
-	$xt->assign("DataSource_fieldblock",true);
 ////////////////////////////////////////////
 //	PartUsed - 
 	$value="";

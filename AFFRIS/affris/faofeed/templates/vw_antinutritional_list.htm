@@ -35,7 +35,13 @@ body {margin:0px;padding:0px;}
 href="vw_antinutritional_search.php">Advanced search</A></SPAN>{END asearch_link} </DIV>{END toplinks_block}
 <DIV id="recordcontrolsadd_block{$id}" class=shade>{BEGIN newrecord_controls}<SPAN id=newrecords_block class=shade>{BEGIN add_link}<SPAN class=shade><A 
 href="vw_antinutritional_add.php">Add new</A> </SPAN>{END add_link}</SPAN>{END newrecord_controls}{BEGIN search_records_block}<SPAN id="search_records_block{$id}" class=shade>{BEGIN searchform}<SPAN id="searchform{$id}" class=shade><B>Search for: </B>&nbsp;&nbsp;&nbsp; {BEGIN searchform_field}<SELECT id="ctlSearchField{$id}"><option value="">Any field</OPTION> <option value="IName" {$IName_searchfieldoption}>Ingredient Name</OPTION> <option value="Description" {$Description_searchfieldoption}>Description</OPTION> 
-  <option value="AntiFactor" {$AntiFactor_searchfieldoption}>Anti Factor</OPTION> <option value="ToxicLevel" {$ToxicLevel_searchfieldoption}>Toxic Level</OPTION> <option value="Treatment" {$Treatment_searchfieldoption}>Treatment</OPTION> <option value="DataSource" {$DataSource_searchfieldoption}>Data Source</OPTION> <option value="PartUsed" {$PartUsed_searchfieldoption}>Part Used</OPTION></SELECT>{END searchform_field} &nbsp; {BEGIN searchform_option}<SELECT id="ctlSearchOption{$id}"><option value="Contains" {$Contains_searchtypeoption}>Contains</OPTION> <option value="Equals" {$Equals_searchtypeoption}>Equals</OPTION> <option value="Starts with ..." {$Starts_with_____searchtypeoption}>Starts with ...</OPTION> <option value="More than ..." {$More_than_____searchtypeoption}>More than ...</OPTION> <option value="Less than ..." {$Less_than_____searchtypeoption}>Less than ...</OPTION> 
+  <option value="AntiFactor" {$AntiFactor_searchfieldoption}>Anti-nutritional factor</OPTION> 
+  <option value="Treatment" {$Treatment_searchfieldoption}>Treatment</OPTION> 
+  <option value="SciName" {$SciName_searchfieldoption}>Scientific Name</OPTION> 
+  <option value="PartUsed" {$PartUsed_searchfieldoption}>Part of plant</OPTION></SELECT>{END searchform_field} &nbsp; {BEGIN searchform_option}<SELECT id="ctlSearchOption{$id}">
+  <option value="Contains" {$Contains_searchtypeoption}>Contains</OPTION> <option value="Equals" {$Equals_searchtypeoption}>Equals</OPTION> 
+  <option value="Starts with ..." {$Starts_with_____searchtypeoption}>Starts with ...</OPTION> <option value="More than ..." {$More_than_____searchtypeoption}>More than ...</OPTION> 
+  <option value="Less than ..." {$Less_than_____searchtypeoption}>Less than ...</OPTION> 
   <option value="Equal or more than ..." {$Equal_or_more_than_____searchtypeoption}>Equal or more than ...</OPTION> 
   <option value="Equal or less than ..." {$Equal_or_less_than_____searchtypeoption}>Equal or less than ...</OPTION> 
   <option value="Empty" {$Empty_searchtypeoption}>Empty</OPTION></SELECT>{END searchform_option} &nbsp; {BEGIN searchform_text}<INPUT {$searchfor_attrs}>{END searchform_text} &nbsp; {BEGIN searchform_search}<INPUT class=button value=Search type=button {$searchbutton_attrs}>{END searchform_search} 
@@ -56,18 +62,16 @@ selected</A></SPAN> {END delete_link}</DIV>{END record_controls}
     {END checkbox_header}</TD>{END checkbox_column}
     {BEGIN IName_fieldheadercolumn}<TD class=blackshade>{BEGIN IName_fieldheader}<A class=blackshade 
       {$IName_orderlinkattrs}>Ingredient Name</A> {END IName_fieldheader}</TD>{END IName_fieldheadercolumn}
+    {BEGIN SciName_fieldheadercolumn}<TD class=blackshade>{BEGIN SciName_fieldheader}<A class=blackshade 
+      {$SciName_orderlinkattrs}>Scientific Name</A> {END SciName_fieldheader}</TD>{END SciName_fieldheadercolumn}
     {BEGIN Description_fieldheadercolumn}<TD class=blackshade>{BEGIN Description_fieldheader}<A class=blackshade 
       {$Description_orderlinkattrs}>Description</A> {END Description_fieldheader}</TD>{END Description_fieldheadercolumn}
     {BEGIN AntiFactor_fieldheadercolumn}<TD class=blackshade>{BEGIN AntiFactor_fieldheader}<A class=blackshade 
       {$AntiFactor_orderlinkattrs}>Anti-nutritional factor</A> {END AntiFactor_fieldheader}</TD>{END AntiFactor_fieldheadercolumn}
-    {BEGIN ToxicLevel_fieldheadercolumn}<TD class=blackshade>{BEGIN ToxicLevel_fieldheader}<A class=blackshade 
-      {$ToxicLevel_orderlinkattrs}>Toxic Level</A> {END ToxicLevel_fieldheader}</TD>{END ToxicLevel_fieldheadercolumn}
     {BEGIN PartUsed_fieldheadercolumn}<TD class=blackshade>{BEGIN PartUsed_fieldheader}<A class=blackshade 
-      {$PartUsed_orderlinkattrs}>Part Used</A> {END PartUsed_fieldheader}</TD>{END PartUsed_fieldheadercolumn}
+      {$PartUsed_orderlinkattrs}>Part of plant</A> {END PartUsed_fieldheader}</TD>{END PartUsed_fieldheadercolumn}
     {BEGIN Treatment_fieldheadercolumn}<TD class=blackshade>{BEGIN Treatment_fieldheader}<A class=blackshade 
-      {$Treatment_orderlinkattrs}>Method of inactivation</A> {END Treatment_fieldheader}</TD>{END Treatment_fieldheadercolumn}
-    {BEGIN DataSource_fieldheadercolumn}<TD class=blackshade>{BEGIN DataSource_fieldheader}<A class=blackshade 
-      {$DataSource_orderlinkattrs}>Data Source</A> {END DataSource_fieldheader}</TD>{END DataSource_fieldheadercolumn}
+      {$Treatment_orderlinkattrs}>Treatment</A> {END Treatment_fieldheader}</TD>{END Treatment_fieldheadercolumn}
     {BEGIN endrecordheader_block}<TD>&nbsp;</TD>{END endrecordheader_block}{END record_header}</TR>{END grid_header}
   {BEGIN grid_row}<TR vAlign=top {$rowattrs} {$rowstyle}>{BEGIN grid_record}
     {BEGIN edit_column}<TD vAlign=middle align=middle>{BEGIN edit_link}<A {$editlink_attrs}>Edit</A> {END edit_link}</TD>{END edit_column}
@@ -75,12 +79,11 @@ selected</A></SPAN> {END delete_link}</DIV>{END record_controls}
     {BEGIN checkbox_column}<TD vAlign=middle align=middle>{BEGIN checkbox}<INPUT type=checkbox {$checkbox_attrs}> {END checkbox}</TD>{END checkbox_column}
     {BEGIN IName_fieldcolumn}<TD vAlign=middle align=left {$IName_style}>{$IName_value} 
     </TD>{END IName_fieldcolumn}
+    {BEGIN SciName_fieldcolumn}<TD vAlign=middle align=left {$SciName_style}>{$SciName_value} </TD>{END SciName_fieldcolumn}
     {BEGIN Description_fieldcolumn}<TD vAlign=middle align=left {$Description_style}>{$Description_value} </TD>{END Description_fieldcolumn}
     {BEGIN AntiFactor_fieldcolumn}<TD vAlign=middle align=left {$AntiFactor_style}>{$AntiFactor_value} </TD>{END AntiFactor_fieldcolumn}
-    {BEGIN ToxicLevel_fieldcolumn}<TD vAlign=middle align=left {$ToxicLevel_style}>{$ToxicLevel_value} </TD>{END ToxicLevel_fieldcolumn}
     {BEGIN PartUsed_fieldcolumn}<TD vAlign=middle align=left {$PartUsed_style}>{$PartUsed_value} </TD>{END PartUsed_fieldcolumn}
     {BEGIN Treatment_fieldcolumn}<TD vAlign=middle align=left {$Treatment_style}>{$Treatment_value} </TD>{END Treatment_fieldcolumn}
-    {BEGIN DataSource_fieldcolumn}<TD vAlign=middle align=left {$DataSource_style}>{$DataSource_value} </TD>{END DataSource_fieldcolumn}
     {BEGIN endrecord_block}<TD class=body2 {$endrecordblock_attrs}>&nbsp;</TD>{END endrecord_block}{END grid_record}</TR>{END grid_row}</TBODY></TABLE>{END grid_block}
 {BEGIN pagination_block}<DIV class=toplist align=center>{$pagination}</DIV>{END pagination_block}
 {BEGIN message_block}<DIV class=toplist align=center valign="middle"><B>{$message}</B></DIV>{END message_block}{$footer} </DIV>{END body}</BODY></HTML>

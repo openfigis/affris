@@ -11,7 +11,7 @@ if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")
 	$gstrOrderBy="order by ".$gstrOrderBy;
 
 $g_orderindexes=array();
-$gsqlHead="SELECT IngredientID,  IName,  Description,  AntiID,  AntiFactor,  ToxicLevel,  TreatmentID,  Treatment,  IDSourceID,  DataSource,  PartUsedID,  PartUsed ";
+$gsqlHead="SELECT IngredientID,  IName,  Description,  AntiID,  AntiFactor,  ToxicLevel,  TreatmentID,  Treatment,  IDSourceID,  DataSource,  PartUsedID,  PartUsed, SciName ";
 $gsqlFrom="FROM vw_antinutritional ";
 $gsqlWhereExpr="";
 $gsqlTail="";

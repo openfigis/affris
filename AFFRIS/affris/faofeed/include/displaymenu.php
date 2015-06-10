@@ -81,7 +81,7 @@
 	$menuNode["openType"] = "None";					 
 
 	// set title		
-			$menuNode["title"] = "Ingredient analysis";
+			$menuNode["title"] = "Aquaculture feeds and feed analysis";
 			
 	$menuNodes[] = $menuNode;	
 	

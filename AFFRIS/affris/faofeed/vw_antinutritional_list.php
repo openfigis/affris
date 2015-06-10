@@ -110,6 +110,7 @@ else if(@$_REQUEST["a"]=="search")
 {
 	$basicSearchFieldsArr = array();
 	$basicSearchFieldsArr[]="IName";
+	$basicSearchFieldsArr[]="SciName";
 	$basicSearchFieldsArr[]="Description";
 	$basicSearchFieldsArr[]="AntiFactor";
 	$basicSearchFieldsArr[]="ToxicLevel";
@@ -324,6 +325,18 @@ else
 	$orderlinkattrs=" href=\"".$href."\" OnMouseDown=\"sort(event,this.href);\" OnMouseOver=\"addspan(event);\" OnMouseMove=\"movespan(event);\" OnMouseOut=\"delspan();\"";
 $xt->assign("IName_orderlinkattrs",$orderlinkattrs);
 $xt->assign("IName_fieldheader",true);
+//orderlinkattrs for SciName
+$href="vw_antinutritional_list.php?orderby=aSciName";
+$orderlinkattrs="";
+if($mode==LIST_LOOKUP)
+{
+	$href.="&".$lookupparams;
+	$orderlinkattrs="onclick=\"window.frames['flyframe".$id."'].location='".$href."';return false;\" href=\"".$href."\"";
+}
+else
+	$orderlinkattrs=" href=\"".$href."\" OnMouseDown=\"sort(event,this.href);\" OnMouseOver=\"addspan(event);\" OnMouseMove=\"movespan(event);\" OnMouseOut=\"delspan();\"";
+$xt->assign("SciName_orderlinkattrs",$orderlinkattrs);
+$xt->assign("SciName_fieldheader",true);
 //orderlinkattrs for Description
 $href="vw_antinutritional_list.php?orderby=aDescription";
 $orderlinkattrs="";
@@ -834,6 +847,8 @@ if(@$_SESSION[$sessionPrefix."_search"]==1)
 		$strWhere = "1=0";
 		if($where=StrWhereExpression("IName", $strSearchFor, $strSearchOption, ""))
 			$strWhere .= " or ".$where;
+		if($where=StrWhereExpression("SciName", $strSearchFor, $strSearchOption, ""))
+			$strWhere .= " or ".$where;
 		if($where=StrWhereExpression("Description", $strSearchFor, $strSearchOption, ""))
 			$strWhere .= " or ".$where;
 		if($where=StrWhereExpression("AntiFactor", $strSearchFor, $strSearchOption, ""))
@@ -1111,6 +1126,11 @@ if($allow_search)
 				$value = ProcessLargeText(GetData($data,"IName", ""),"field=IName".$keylink,"",MODE_LIST);
 			$record["IName_value"]=$value;
 
+//	SciName - 
+			$value="";
+				$value = ProcessLargeText(GetData($data,"SciName", ""),"field=SciName".$keylink,"",MODE_LIST);
+			$record["SciName_value"]=$value;
+
 //	Description - 
 			$value="";
 				$value = ProcessLargeText(GetData($data,"Description", ""),"field=Description".$keylink,"",MODE_LIST);
@@ -1147,6 +1167,8 @@ if($allow_search)
 			
 		if(!strlen($record["IName_value"]))
 			$record["IName_value"]="&nbsp";
+		if(!strlen($record["SciName_value"]))
+			$record["SciName_value"]="&nbsp";
 		if(!strlen($record["Description_value"]))
 			$record["Description_value"]="&nbsp";
 		if(!strlen($record["AntiFactor_value"]))
@@ -1357,24 +1379,27 @@ elseif ($mode==LIST_LOOKUP)
 $xt->assign("IName_fieldheadercolumn",true);
 $xt->assign("IName_fieldcolumn",true);
 $xt->assign("IName_fieldfootercolumn",true);
+$xt->assign("SciName_fieldheadercolumn",true);
+$xt->assign("SciName_fieldcolumn",true);
+$xt->assign("SciName_fieldfootercolumn",true);
 $xt->assign("Description_fieldheadercolumn",true);
 $xt->assign("Description_fieldcolumn",true);
 $xt->assign("Description_fieldfootercolumn",true);
 $xt->assign("AntiFactor_fieldheadercolumn",true);
 $xt->assign("AntiFactor_fieldcolumn",true);
 $xt->assign("AntiFactor_fieldfootercolumn",true);
-$xt->assign("ToxicLevel_fieldheadercolumn",true);
-$xt->assign("ToxicLevel_fieldcolumn",true);
-$xt->assign("ToxicLevel_fieldfootercolumn",true);
+$xt->assign("ToxicLevel_fieldheadercolumn",false);
+$xt->assign("ToxicLevel_fieldcolumn",false);
+$xt->assign("ToxicLevel_fieldfootercolumn",false);
 $xt->assign("PartUsed_fieldheadercolumn",true);
 $xt->assign("PartUsed_fieldcolumn",true);
 $xt->assign("PartUsed_fieldfootercolumn",true);
 $xt->assign("Treatment_fieldheadercolumn",true);
 $xt->assign("Treatment_fieldcolumn",true);
 $xt->assign("Treatment_fieldfootercolumn",true);
-$xt->assign("DataSource_fieldheadercolumn",true);
-$xt->assign("DataSource_fieldcolumn",true);
-$xt->assign("DataSource_fieldfootercolumn",true);
+$xt->assign("DataSource_fieldheadercolumn",false);
+$xt->assign("DataSource_fieldcolumn",false);
+$xt->assign("DataSource_fieldfootercolumn",false);
 	
 $display_grid = $allow_search && $rowsfound;
 
